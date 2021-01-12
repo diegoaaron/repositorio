@@ -22,6 +22,47 @@
 `pip install Django`
 `pip install Django==3.1.1`
 
+#### crear una lista de los programas instalados (para futuros despliegues de la aplicación)
+`pip freeze > requirements.txt`
+
+#### instalar una lista de programas desde un archivo
+`pip install -r requirements.txt` 
+
+#### instalar pylint (validador de código Python según la norma PEP8)
+`pip install pylint`
+
+#### crear un proyecto Django
+`django-admin startproject name_project` 
+
+#### ejecutar prueba de Django
+`python manage runserver`
+
+#### agregando una aplicación dentro de un proyecto
+`python manage.py startapp name_app`
+
+#### aplica los cambios de las migraciones en la base de datos
+`python manage.py migrate`
+
+#### crear un registro de los cambios que se desean guardar para una futura edición
+`python manage.py makemigrations app_name`
+
+#### mostrar los cambios que se desean guardar en formato SQL
+`python manage.py sqlmigrate app_name 000X` 
+
+#### validar si hay errores en las migraciones a aplicar en la base de datos
+`python manage.py check`
+
+#### ingresar al API de Django
+`python manage.py shell`
+
+#### creando usuario administrador del panel de administración de Django
+`python manage.py createsuperuser`
+
+#### empaquetar los archivos css, js e imágenes para ser utilizados
+`python manage.py collectstatic`
+
+#### ejecutar test automático a una aplicación
+`python manage.py test app_name`
 
 
 
@@ -63,3 +104,29 @@ https://www.digitalocean.com/community/tutorials/how-to-deploy-django-to-app-pla
 
 https://css-tricks.com/couple-takes-sticky-footer/
 
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+Documentos y guías ya revisadas
+
+# Instalación de virtualenv
+https://virtualenv.pypa.io/en/stable/installation.html
+
+# Documentación Django 3.1 (estructurada)
+https://docs.djangoproject.com/en/3.1/
+
+# Indice de las API de referencia de Django 3.1
+https://docs.djangoproject.com/en/3.1/ref/
+
+# Tutorial para desplegar una aplicación Django en Heroku
+https://www.codementor.io/@jamesezechukwu/how-to-deploy-django-app-on-heroku-dtsee04d4
+https://devcenter.heroku.com/articles/django-assets
+
+# Configurar servidor ngnix + gunicorn para Django
+https://www.digitalocean.com/community/tutorials/como-configurar-django-con-postgres-nginx-y-gunicorn-en-ubuntu-18-04-es
+
+# Explicación de la diferencia entre ASGI y WSGI
+https://www.maxongzb.com/why-asgi-is-replacing-wsgi-in-django-reading-time-3-mins/
+https://medium.com/analytics-vidhya/difference-between-wsgi-and-asgi-807158ed1d4c
+
+# 

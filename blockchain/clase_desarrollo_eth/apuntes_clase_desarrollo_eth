@@ -1,0 +1,71 @@
+https://github.com/nvm-sh/nvm#install--update-script 
+
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
+
+exec $SHELL 
+
+command -v nvm 
+
+nvm install --lts 
+
+node --version && npm --version 
+
+
+# 
+https://www.trufflesuite.com/ 
+
+
+# Ganache - permite crear maquinas virtual de cadena de bloques
+npm i -g ganache-cli truffle
+
+# truffle - permite crear una cadena desde cero, 
+truffle init       - crea una blockchain
+
+# crea un contrato inteligente tllamado banco
+truffle create contract Bank
+
+
+# navegador web3 basico 
+https://web3js.readthedocs.io/ 
+
+# documentación sobre compiladores
+https://docs.soliditylang.org/
+
+
+
+# Canal youtube donde se subira el video de la clase
+https://www.youtube.com/channel/UConS6tukuWcssaE0Q1vzbjQ
+
+
+# Herramientas para configurar vscode para crear contratos inteligientes  
+Name: Solidity Visual Developer
+Id: tintinweb.solidity-visual-auditor
+Description: Ethereum Solidity Language customized for developers and auditors using Visual Studio Code
+Version: 0.0.30
+Publisher: tintinweb
+VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=tintinweb.solidity-visual-auditor 
+
+
+# detalle del contrato 
+https://www.npmjs.com/package/@truffle/contract 
+
+
+# TDD - es una forma de desarrollar códigos 
+
+
+
+
+Hoy tenemos POAP Código: ethbog-dic2020 En el siguiente canal del Discord de ETHLATAM https://discord.gg/AwpCTTjB 
+
+# 
+https://www.chaijs.com/api/bdd/#method_least 
+
+
+# Debo repasar la parte de programación asincrona en JS
+"promesas" 
+
+# Debo de repasar la parte de programación imperativa 
+
+
+
+
