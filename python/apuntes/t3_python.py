@@ -2,24 +2,6 @@
 
 # Las cadenas se pueden expresar en comillas simples dobles y triples. Las comillas triples preservan los saltos de línea 
 
-# La función format() permite construir cadenas de una forma más detallada y específica. Esta funcion soporta varias formas de definir los parametros para la cadena a crear
-
-age = 20
-name = 'Swaroop'
-
-print("{0} was {1} years old when he wrote this book".format(name, age))
-print("Why is {0} playing with that Python".format(name))
-
-print("{} was {} years old when he wrote this book".format(name, age))
-print("Why is {} playing with that Python".format(name))
-
-print('{name} was {age} years old when he wrote this book'.format(name=name, age=age))
-print('Why is {name} playing with that python?'.format(name=name))
-
-print('{0:.3f}'.format(1.0/3)) # precion decimal (.) de 3 para el número 0.333
-print('{0:_^11}'.format('hello')) # llena con guiones alrededor de la palabra 'hello' hasta juntar 11 caracteres
-print('{name} wrote {book}'.format(name='Swaroop', book='A Byte of Python'))
-
 
 # En Python 3.6 aparecen los 'f-strings' que permite crear cadenas con formatos. Son una forma simplificada de la función format() 
 
@@ -236,5 +218,3 @@ def print_max2(x, y):
 print(print_max2.__doc__)
 print(print_max2(50, 30))
 print(print_max2(10, 20))
-
-# 
