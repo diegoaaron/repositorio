@@ -1,3 +1,5 @@
+## Comandos de referencia
+
 #### inicializa un proyecto git dentro del directorio que se encuentra
 `git init`
 
@@ -34,8 +36,7 @@
 #### une a la rama actual, la rama name_branch
 `git merge name_branch`
 
-------------------------------------------------------------------------------------------------
-## Documentos y guías ya revisadas
+## Artículos y guías
 
 #### Configuración de SSH en equipo
 - https://docs.github.com/es/github/authenticating-to-github/connecting-to-github-with-ssh
