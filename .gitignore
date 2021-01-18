@@ -1,2 +1,4 @@
-# vscode
-.vscode/*
+# vscode de configuración local
+git/.vscode/*
+python/.vscode/*
+django/.vscode/*
