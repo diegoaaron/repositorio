@@ -1,19 +1,4 @@
 
-# dunder methods: es como se denomina a los métodos que inician y terminan con dos guiones bajo y permiten personalizar una clase.
-
-class Friend:
-
-    def __init__(self, name, age): # inicializa propiedades en las instancias de las clases
-        self.name = name
-        self.age = age
-
-    def __str__(self): # muetra un mensaje cuando imprimimos un método de la clase
-        return f"{self.name} is {self.age} years old"
-
-primerfriend = Friend("Eduard", 99)
-print(primerfriend)
-
-
 
 # Atributo y método estático: característica para un atributo o método de ser unicos en todos los objetos de la clase (no necesitan ser instanciados para ser accedidos). Los atributos de la clase que tienen asignado un valor se vuelven estáticas. Para definir un método como estático se utiliza el decorador '@staticmethod' 
 
@@ -56,6 +41,4 @@ print("La suma de 5 y 6 es:", primeracalculadora.suma(5, 6))
 # metodos: son funciones que el objeto puede realizar y que a veces necesitan de ciertos argumentos para poder operar
 
 # la práctica recomendad indica que se deben de crear métodos para modificar los atributos de nuestro objetos
-
-# Desde Python se puede llamar a código en C o C++
 

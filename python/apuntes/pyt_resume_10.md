@@ -1,4 +1,4 @@
-### Documentos y guías revisados
+## Artículos y guías
 
 #### Explicación sobre la encapsulación en Python (porque no existe encapsulacion en Python)
 * https://stackoverflow.com/questions/62688315/private-attributes-in-python-and-pep8
