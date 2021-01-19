@@ -3,16 +3,19 @@
 #### inicializa un proyecto git dentro del directorio que se encuentra
 `git init`
 
-#### clonar un repositorio 
-`git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY`
+#### clonar un repositorio (formato SSH)
+`git clone git@github.com:USERNAME/NAME_REPOSITORY.git` 
 
 #### lista las ramas e indica la rama actual 
 `git branch`
 
+#### crear una nueva rama 
+`git branch name_branch`
+
 #### elimina la rama name_branch
 `git branch -d name_branch`
 
-#### cambiar a la rama name_branch
+#### movernos a la rama name_branch
 `git checkout name_branch` 
 
 ##### envia la información de la local_branch hacia remote_branch
@@ -43,3 +46,5 @@
 [Configuración de comandos básicos de github](https://docs.github.com/es/free-pro-team@latest/github/creating-cloning-and-archiving-repositories)
 
 [Referencias sobre Markdown](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax) 
+
+[Deshacer último commit](https://midu.dev/como-deshacer-el-ultimo-commit-git/)
