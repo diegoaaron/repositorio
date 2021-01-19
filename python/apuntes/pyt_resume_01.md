@@ -1,18 +1,3 @@
-## Conceptos del paradigma de programación orientado a objetos
-
-**abstracción**: proceso mental en el cual extraemos las características esenciales de algo, ignorando los detalles superfluos.
-
-**encapsulación**: proceso en el cual se oculta el estado de las características de una abstracción y se permite su modificación solo por operaciones definidas en la abstracción. 
-
-**modularisación**: proceso de descomposición de un sistema en un conjunto de piezas cohesivas (con significado propio) y poco  acopladas (mínima interdependencia). 
-
-**jerarquización**: proceso de ordenar en niveles (jerarquias) los elementos (modulos) de un sistema.
-  - **composición**: ocurre cuando un elemento (sistema) esta compuesto de otros (sistemas). Por ejemplo el sistema respiratorio esta compuestos de las fozas nasales, traquea y pulmones. Estos a su vez se compone de los albeolos, venas, etc. Este conepto explica la existencia de los conceptos de *clase* y *objeto*. 
-  - **clasificación**: ocurre cuando un elemento (sistema) es la especialización de otro. Por ejemplo los animales pueden ser vertabrados o invertebrados,  dentro de los vertebrados tenemos a los reptiles, insectos y mamíferos. Dentro de los mamíferos a los perros, vacas, etc. Este concepto explica la existencia del concepto de *herencia*.
-
-- [explicación complementaria 1](https://desarrolloweb.com/manuales/teoria-programacion-orientada-objetos.html)
-- [explicación complementaria 2](https://www.youtube.com/watch?v=jQx8z1eNMXE)
-
 ## Elementos del paradigma de programación orientado a objetos utilizando python
 
 **variable**: es un espacio en memoria que almace una valor.
