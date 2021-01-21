@@ -41,7 +41,7 @@ print(perimetroRectangulo.perimetro())
 - [explicación complementaria 1](https://www.youtube.com/watch?v=H9SnCQvoNHk)
 - [explicación complementaria 2](https://www.3engine.net/wp/2015/02/clases-abstractas-en-python/)
 
-**atributos y método estático**: característica para un atributo o método de ser unicos en todos los objetos de la clase (no necesitan ser instanciados para ser accedidos). Los atributos de la clase que tienen asignado un valor se vuelven estáticas. Para definir un método como estático se utiliza el decorador *@staticmethod* 
+**método estático**: característica para un atributo o método de ser unicos en todos los objetos de la clase (no necesitan ser instanciados para ser accedidos). Los atributos de la clase que tienen asignado un valor se vuelven estáticas. Para definir un método como estático se utiliza el decorador *@staticmethod* 
 
 ```python
 class Calculadora:
