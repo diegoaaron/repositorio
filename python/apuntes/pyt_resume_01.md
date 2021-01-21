@@ -1,12 +1,12 @@
-## Elementos del paradigma de programación orientado a objetos utilizando python
+## Elementos del paradigma de programación orientado a objetos
 
 **variable**: es un espacio en memoria que almace una valor.
 
 **función**: es un conjunto de código agrupado bajo un nombre y que puede ser invocado.
 
-**clase**: es un molde para crear objetos. La nomenclatura para el nombre de las clases compuestas utiliza la notación *CamelCase*.
+**clase**: es un molde para crear objetos. La nomenclatura para el nombre de las clases utiliza la notación *CamelCase*.
   - **atributos**: son las características que tendran los objetos. Por ejemplo nombre, edad, etc.
-  - **métodos**: son las funcionalidades que tendran los objetos. Por ejemplo *mostrar_nombre()*, *calcular_edad()*, etc. Un método es una *función* declarada dentro de una *clase* y por ende debe tener como primer *argumento* la palabra *self*. La ejecución de un método puede cambiar el estado de un objeto.
+  - **métodos**: son las funcionalidades que tendran los objetos. Por ejemplo *mostrar_nombre()*, *calcular_edad()*, etc. Un método es una *función* declarada dentro de una *clase* y por ende debe tener como primer *parámetro* la palabra *self*. La ejecución de un método puede cambiar el estado de un objeto.
     - **método constructor**: es el primer método que entra en funcionamiento al instanciar un objeto.
 
 **objeto**: es la materialización de una clase. La acción de crear un objeto se denomina *instanciar*. 
@@ -25,13 +25,14 @@ class PerroPeruano:
     def detenerse(self):
         texto = "El perro de color " + self.color + " se ha detenido"
         return texto
+    
+    def molestar(self, ruido):
+        print("El perro esta haciendo", ruido)
 
-# Creación de un objeto (instanciación de la clase 'PerroPeruano')
-primerPerro = PerroPeruano("sparky", "negro") 
-# Mostrando un atributo del objeto creado
-print("El perro se llama", primerPerro.nombre)
-# Ejecutando un método del objeto creado 
-primerPerro.avanzar()  
+
+primerPerro = PerroPeruano("sparky", "negro") # Creación de un objeto (instanciación de la clase 'PerroPeruano')
+print("El perro se llama", primerPerro.nombre) # Mostrando un atributo del objeto creado
+primerPerro.avanzar() # Ejecutando un método del objeto creado 
 ```
 
 **herencia**: mecanismo por el cual una clase (hija) hereda el código de otra clase (padre). Python soporta la herencia múltiple.
@@ -55,11 +56,8 @@ class Estudiante(Persona):
     def mostrar_horario(self):
         print("Mi horario aun no esta definido")
 
-# Creación de un objeto (instanciación de la clase 'Persona')
 primerEstudiante = Estudiante("Miguel", "Eliceo", 21) 
-# Ejecutando un método heradado
 primerEstudiante.saludar() 
-# Ejecutando un método propio de la clase
 primerEstudiante.mostrar_horario()
 ```
 
@@ -93,18 +91,12 @@ class Trabajador(Persona):
     def saludar(self):
         print("Una trabajador te saluda")
 
-# creación de un objeto (instanciación de la clase 'Persona')
 primeraPersona = Persona("masculino", 30) 
-# utilizando el método 'saludar()' de forma polimórfica 
-primeraPersona.nacer() 
-# creación de un objeto (instanciación de la clase 'Estudiante')
+primeraPersona.saludar() 
 primerEstudiante = Estudiante("masculino", 30, "sanmarquino")
-# utilizando el método 'saludar()' de forma polimórfica 
-primerEstudiante.nacer() 
-# creación de un objeto (instanciación de la clase 'Trabajador')
+primerEstudiante.saludar() 
 primerTrabajador = Trabajador("masculino", 30, "operario")
-# utilizando el método 'saludar()' de forma polimórfica 
-primerTrabajador.nacer()
+primerTrabajador.saludar()
 ```
 - [explicación complementaria 1](https://pythonpedia.com/es/tutorial/5100/polimorfismo)
 - [explicación complementaria 2](https://youtu.be/Finb7JZJcWE?t=305)

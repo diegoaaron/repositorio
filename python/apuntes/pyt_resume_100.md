@@ -28,8 +28,3 @@ print(primerfriend)
 
 - [explicación complementaria 1](https://www.geeksforgeeks.org/dunder-magic-methods-python/)
 
-## Artículos y guías
-
-- [espacios de nombres](https://j2logo.com/python/tutorial/espacios-de-nombres-modulos-y-paquetes/)
-- [diferencia entre *args y **kwargs](https://j2logo.com/args-y-kwargs-en-python/)
-

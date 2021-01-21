@@ -1,4 +1,4 @@
-## Elementos del paradigma de programación orientado a objetos utilizando python (continuación)
+## Elementos del paradigma de programación orientado a objetos (continuación)
 
 **encapsulación**: mecanismo que permite definir el grado de acceso y modificación de los atributos y métodos de una clase. En Python todos los atributos y métodos son públicos por lo cual no existe la *encapsulación*. Por otra parte si tiene la característica del *name mangling* que simulan en cierta forma este comportamiento.
 
@@ -7,7 +7,7 @@
 - [explicación complementaria 3](https://stackoverflow.com/questions/64579610/how-does-the-concept-of-encapsulation-work-in-python?noredirect=1#comment114190784_64579610)
 - [explicación complementaria 4](https://www.genbeta.com/desarrollo/cazadores-de-mitos-las-propiedades-privadas-en-python)
 
-**clase abstracta**: mecanismo que permite definir clases y métodos que deben ser obligatoriamente implementados en sus clases hijas. Las clases abstractas no se instancia. Python utiliza el módulo *abc* para definir calses abstractas
+**clase abstracta**: mecanismo que permite definir clases y métodos que deben ser obligatoriamente implementados en sus clases hijas. Las clases abstractas no se instancian. Python utiliza el módulo *abc* para definir clases abstractas
 
 ```python
 from abc import ABCMeta, abstractmethod
