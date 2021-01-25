@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset='utf-8'>
+    <title>Aprendiendo Vue.js</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src="https://unpkg.com/vue@3.0.2"></script>
+</head>
+<body>
+    <h1>Hola Vue.js ;)</h1>
+
+    <div id="app">
+
+        <div v-if="showBooks">
+            <p>{{ title }} - {{ author }} - {{ age }}</p>
+        </div>
+
+        <button @click="toggleShowBooks">
+            <span v-if="showBooks">Hide books</span>
+            <span v-else>Show books</span>
+        </button>
+
+        <div v-show="showBooks">currently showing books</div>
+
+        <button v-on:click="age++">Encrease age</button>
+        <button v-on:click="age--">Decrease age</button>
+        <div @click="changeTitle('Oathbringer')">Change book title</div>
+    </div>
+
+    
+
+    <script src="app.js"></script>
+</body>
+</html>
