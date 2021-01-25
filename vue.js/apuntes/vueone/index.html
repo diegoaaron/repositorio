@@ -5,6 +5,18 @@
     <title>Aprendiendo Vue.js</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <script src="https://unpkg.com/vue@3.0.2"></script>
+
+    <style>
+        .box {
+            padding: 100px 0;
+            width: 400px;
+            text-align: center;
+            background: #ddd;
+            margin: 20px;
+            display: inline-block;
+        }
+    </style>
+
 </head>
 <body>
     <h1>Hola Vue.js ;)</h1>
@@ -20,11 +32,14 @@
             <span v-else>Show books</span>
         </button>
 
-        <div v-show="showBooks">currently showing books</div>
+        <br>
 
-        <button v-on:click="age++">Encrease age</button>
-        <button v-on:click="age--">Decrease age</button>
-        <div @click="changeTitle('Oathbringer')">Change book title</div>
+        <!--mouse events -->
+        <div class="box" @mouseover="handleEvent($event, 5)">mouseover (enter)</div>
+        <div class="box" @mouseleave="handleEvent">mouseleave</div>
+        <div class="box" @dblclick="handleEvent">double click</div>
+        <div class="box" @mousemove="handleMousemove">position: {{x}} - {{y}}</div>
+
     </div>
 
     
