@@ -11,6 +11,6 @@
 
 #### arrancar servidor interno de vue cli para levantar el proyecto
 `vue-cli-service serve`
-
+`npm run serve`
 
 
