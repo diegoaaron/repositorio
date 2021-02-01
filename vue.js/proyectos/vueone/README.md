@@ -13,7 +13,7 @@
 - Vue.js v3.0.2
 - HTML, CSS y Javascript
 
-## implementar el proyecto de forma local
+## implementar el proyecto
 
 - descar el proyecto
 - ejecutar el archivo *index.html* desde un navegador

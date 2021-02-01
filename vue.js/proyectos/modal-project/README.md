@@ -1,19 +1,19 @@
-# modal-project
+## proyecto: modal-project
 
-## Project setup
-```
-npm install
-```
+**descripción**: desarrollo de tutorial de vue.js v3
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+- [video relacionado 1](https://www.youtube.com/watch?v=GWRvrSqnFbM&list=PL4cUxeGkcC9hYYGbV60Vq3IXYNfDk8At1&index=4)
+- [video relacionado 2](https://www.youtube.com/watch?v=KM1U6DqZf8M&list=PL4cUxeGkcC9hYYGbV60Vq3IXYNfDk8At1&index=5)
 
-### Compiles and minifies for production
-```
-npm run build
-```
+[ver implementación en línea](#)
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## tecnologías utilizadas
+
+- Vue.js v3.0.2
+- HTML, CSS y Javascript
+
+## implementar el proyecto
+
+- configuración del proyecto - `npm install`
+- compilación para ejecución en local - `npm run serve`
+- compilación para producción - `npm run build`
