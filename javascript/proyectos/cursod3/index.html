@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Episodio 1: La llegada de D3</title>
+    <script src="d3/d3.min.js"></script>
+    <style>
+        .claseprincipal {
+            color: red;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <p>Vacio</p>
+    <p>Vacio</p>
+    <p>Vacio</p>
+    
+    <script>
+        //d3.select("p").style("color", "red");
+        //d3.select("p").text("CAMBIE!");
+        //d3.select("p").attr("name", "ilimitado"); //
+        //d3.select("p").classed("claseprincipal", false);
+        //d3.select("body").append("p").text("SOY LA QUINTA!").attr("class", "claseprincipal");
+        //d3.select("p:nth-child(even)").remove();
+        var misdatos = ["Primer dato", "Segundo dato", "Tercer dato"];
+        /*d3.selectAll("p").data(misdatos).text(function(d, i) {
+            mostrardatos = d + "-" + i;
+            return mostrardatos;
+        });*/
+        /*d3.select("body").selectAll("p").data(misdatos).enter().append("p").text(function(d){
+            return d;
+        });*/
+        /* var parrafos = d3.selectAll("p").data(misdatos).text(function(d, i) {
+            return d;
+        });
+        parrafos.exit().remove();*/
+        /*d3.select("body").selectAll("p").data(misdatos).join(
+            enter => enter.append("p").style("color", "red"),
+            update => update,
+            exit => exit.remove())
+            .text(function(d, i) {
+                return d;
+            });*/
+        /*d3.selectAll("p").datum(misdatos).text(function(d, i) {
+            cadena = d + i;
+            return cadena;
+        });*/
+        d3.json("pruebajson.json").then(function(datos){
+            console.log(datos);
+        });
+    </script>
+</body>
+</html>
