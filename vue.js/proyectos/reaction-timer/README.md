@@ -1,19 +1,18 @@
-# reaction-timer
+## proyecto: reaction-timer
 
-## Project setup
-```
-npm install
-```
+**descripción**: aplicación que mide la velocidad de reflejo para dar click con el mouse
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+- [video relacionado 1](https://youtu.be/bc6czIBLKTg?list=PL4cUxeGkcC9hYYGbV60Vq3IXYNfDk8At1)
 
-### Compiles and minifies for production
-```
-npm run build
-```
+[ver implementación en línea](#)
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## tecnologías utilizadas
+
+- Vue.js v3.0.2
+- HTML, CSS y Javascript
+
+## implementar el proyecto
+
+- configuración del proyecto - `npm install`
+- compilación para ejecución en local - `npm run serve`
+- compilación para producción - `npm run build`
