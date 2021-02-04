@@ -1,5 +1,12 @@
-{
-    "Primerdato": "dato 1",
-    "Segundodato": "dato 1",
-    "Tercerdato": "dato 1"
-}
+[
+    {
+        "Nombre":"Sam",
+        "Cargo":"Presidente",
+        "Edad":50
+    },
+    {
+        "Nombre":"Jennifer",
+        "Cargo":"Secretaria",
+        "Edad":35
+    }
+]

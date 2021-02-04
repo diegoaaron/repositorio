@@ -10,13 +10,20 @@
             color: red;
             background-color: black;
         }
+
+        .barras div {
+            font: 10px sans-serif;
+            background-color: green;
+            text-align: right;
+            padding: 3px;
+            margin: 1px;
+            color: white;
+        }
     </style>
 </head>
 <body>
 
-    <p>Vacio</p>
-    <p>Vacio</p>
-    <p>Vacio</p>
+    <div id="barras" class="barras"></div>
     
     <script>
         //d3.select("p").style("color", "red");
@@ -48,9 +55,41 @@
             cadena = d + i;
             return cadena;
         });*/
-        d3.json("pruebajson.json").then(function(datos){
+
+
+        /*d3.json("pruebajson.json").then(function(datos){
             console.log(datos);
+        });*/
+        /*d3.csv("pruebacsv.csv").then(function(datos){
+            console.log(datos);
+        });*/
+        /*Promise.all([
+            d3.csv('pruebacsv.csv'),
+            d3.json('pruebajson.json')
+        ])
+        .then(capturaDatos);
+
+        function capturaDatos(data){
+            jugadores = data[0];
+            empresa = data[1];
+
+            console.log(jugadores[0]);
+            console.log(empresa[0]);
+        }*/
+        d3.xml("pruebaxml.xml").then(function(xml){
+            d3.select("#barras")
+                .selectAll("div")
+                .data(xml.documentElement.getElementsByTagName("value"))
+                .enter()
+                .append("div")
+                .style("width", function(d){
+                    return d.textContent * 10 + "px";
+                })
+                .text(function(d){
+                    return d.textContent;
+                });
         });
+
     </script>
 </body>
 </html>
