@@ -1,4 +1,4 @@
-## proyecto: tutorial d3 básico
+## proyecto: first d3 test
 
 **descripción**: desarrollo de tutorial básico sobre la libreria d3.js
 
