@@ -1,19 +1,20 @@
-# dojo_blog
+## proyecto: dojo_blog
 
-## Project setup
-```
-npm install
-```
+**descripción**: desarrollo de tutorial de vue.js v3 - creación de un pequeño blog
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+- [video relacionado 1](https://www.youtube.com/watch?v=V-kxBWcPJfo&list=PL4cUxeGkcC9hYYGbV60Vq3IXYNfDk8At1&index=10)
+- [video relacionado 2](https://www.youtube.com/watch?v=0FwBjPeLqQ8&list=PL4cUxeGkcC9hYYGbV60Vq3IXYNfDk8At1&index=11)
 
-### Compiles and minifies for production
-```
-npm run build
-```
+[ver implementación en línea](#)
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## tecnologías utilizadas
+
+- Vue.js v3.0.2
+- HTML, CSS y Javascript
+
+## implementar el proyecto
+
+- configuración del proyecto - `npm install`
+- compilación para ejecución en local - `npm run serve`
+- compilación para producción - `npm run build`
+- ejecutar el servidor temporal de archivos json - `npx json-server --watch data/db.json`

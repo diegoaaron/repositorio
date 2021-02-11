@@ -13,4 +13,6 @@
 `vue-cli-service serve`
 `npm run serve`
 
+#### ejecutar servidor json para pruebas (desde el proyecto)
+`npx json-server --watch data/db.json`
 
