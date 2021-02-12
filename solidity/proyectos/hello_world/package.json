@@ -1,0 +1,14 @@
+{
+  "name": "hello_world",
+  "version": "1.0.0",
+  "description": "prueba de hardhat framework con un hola mundo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "diego damian",
+  "license": "ISC",
+  "devDependencies": {
+    "hardhat": "^2.0.10"
+  }
+}
