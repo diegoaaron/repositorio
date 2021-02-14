@@ -16,7 +16,7 @@
 #### mostras las cuentas creadas por el framework para realizar pruebas
 `npx hardhat accounts`
 
-#### compila el código de los smart contracts creados
+#### compila el código de los smart contracts de todo el proyecto
 `npx hardhat compile`
 
 #### ejecuta los test definidos para el smart contract
@@ -25,10 +25,11 @@
 #### despliega los contratos compilados
 `npx hardhat run scripts/sample-script.js`
 
+#### levanta la blockchain de prueba y despliega el contrato utilizando el script definido
+`npx hardhat run scripts/sample-script.js --network localhost`
+
 #### levantar interfaz de la blockchain de prueba creada por hardhat cuando se crea el proyecto (expone una interfaz JSON-RPC)
 `npx hardhat node`
-`npx hardhat run scripts/sample-script.js --network localhost`
-#### ejecuta el script
 
 
 
