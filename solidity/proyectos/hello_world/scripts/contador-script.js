@@ -14,6 +14,7 @@ async function main() {
   // await hre.run('compile');
 
   // We get the contract to deploy
+  
   const Contador = await hre.ethers.getContractFactory("Contador");
   const contador = await Contador.deploy(50);
 
