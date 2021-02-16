@@ -1,43 +1,17 @@
 <template>
-  <h1>Dc Heros {{ herosCount }} </h1>
-
-  <ul>
-    <li v-for="(hero, index) in dcHeros" :key="hero.name">
-      <div>{{ hero.name }} <button @click="remove(index)">x</button> </div>
-    </li>
-  </ul>
-
-  <form @submit.prevent="addHero">
-    <input v-model="newHero" placeholder="Type Hero Name here">
-    <button type="submit">Add Hero</button>
-  </form>
-
+<AppHeader />
+<div class="w-full flex">
+<DcHeros />
+</div>
 </template>
 
 <script>
+import AppHeader from "./components/AppHeader";
+import DcHeros from "./components/DcHeros";
+
 export default {
-  computed: {
-    herosCount() {
-      return this.dcHeros.length + " heros";
-    },
-  },
-  methods: {
-    addHero() {
-      if(this.newHero !== '') {
-        this.dcHeros.push({ name: this.newHero });
-        this.newHero = "";
-      }
-    },
-    remove(index) {
-      this.dcHeros = this.dcHeros.filter((hero, i) => i != index);
-    },
-  },
-  data() {
-    return {
-      newHero: "",
-      dcHeros: [{name: "Supergirl"}, {name: "Flash"}, {name: "Batman"}, {name: "Arrow"}, {name: "Superman"}],
-    }
-  }
+  components: { AppHeader, DcHeros },
+
 }
 </script>
 
