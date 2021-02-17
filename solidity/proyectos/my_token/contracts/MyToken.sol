@@ -26,6 +26,21 @@ contract MyToken is ERC20 {
     uint8 public override decimals = 18;
     uint256 public override totalSupply;
 
+    constructor(address _owner, uint256 _initialSupply) { //forma correcta de agregar los tokens al crear el contrato
+        usersBalance[_owner] = _initialSupply;
+        totalSupply = _initialSupply;
+    }
+
+    // Hacer una función BUY que permita comprar tokens con ETH
+    // Hacer función Burn 
+
+
+
+    function mint(uint256 _value) public { // aumentando el total de tokens a un contrato - no recomenando
+        usersBalance[msg.sender] = usersBalance[msg.sender] + _value;
+        totalSupply += _value;
+    }
+
     mapping(address => uint256) public usersBalance;
     mapping(address => mapping(address => uint256)) public allowance;
 
@@ -36,6 +51,9 @@ contract MyToken is ERC20 {
     function transfer(address _to, uint256 _value) external override returns (bool success) {
         usersBalance[msg.sender] = usersBalance[msg.sender] - _value;
         usersBalance[_to] = usersBalance[_to] + _value;
+
+        emit Transfer(msg.sender, _to, _value);
+
         return true;
     }
 
@@ -49,6 +67,11 @@ contract MyToken is ERC20 {
         }  
     }
 
-    
+    function approve(address _spender, uint256 _value) external override returns (bool success){
+        usersBalance[msg.sender][_spender] = allowance[msg.sender][_spender] + _value;
+        emit Approval(msg.sender, _spender, _value);
+
+        return true;
+    }
 
 }
