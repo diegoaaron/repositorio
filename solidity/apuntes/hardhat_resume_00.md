@@ -5,6 +5,7 @@
 
 #### instala en el framework hardhat dentro del proyecto (es instalado como una dependencia para desarrollo, o sea de forma local)
 `npm install --save-dev hardhat`
+`npm install -D hardhat`
 
 #### crea la plantilla del proyecto Solidity (debe ser llamada desde la carpeta principal del proyecto)
 #### cuando el proyecto ya esta creado, sirve para ejecutar comandos del framework sobre el proyecto
