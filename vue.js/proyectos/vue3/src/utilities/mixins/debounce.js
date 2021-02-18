@@ -1,4 +1,4 @@
-const debounce = {
+export default {
     data() {
         return {
             timeout: "",
