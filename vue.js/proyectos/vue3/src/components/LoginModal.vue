@@ -6,15 +6,18 @@
             <div class="flex h-full">
                 <div class="z-30 m-auto bg-white p-2 rounded shadow w-1/3">
                     <div class="p-2 border" >
-                        <h1 class="text-xl">Login</h1>
-                        <form class="p-2 my-2">
+                        <h1 class="text-xl text-center">Login</h1>
+                        <form class="p-2 my-2" @submit.prevent="submit">
                             <div class="my-4">
                                 <label>Email or Username</label>
-                                <input class="rounded shadow p-2 w-full" />
+                                <input v-model="email" class="rounded shadow p-2 w-full" placeholder="Enter your email or username" />
                             </div>
                             <div class="my-4">
                                 <label>Password</label>
-                                <input class="rounded shadow p-2 w-full" type="password" />
+                                <input v-model="password" class="rounded shadow p-2 w-full" type="password" placeholder="Enter your password" />
+                            </div>
+                            <div class="my-4">
+                                <button type="submit" class="w-full rounded shadow-md bg-gradient-to-r from-red-800 to-pink-800 text-white p-2">Login</button>
                             </div>
                         </form>
                     </div>
@@ -24,8 +27,26 @@
 </template>
 
 <script>
-export default {
+import firebase from '../utilities/firebase';
 
+export default {
+    data () {
+        return {
+            email: "",
+            password: "",
+        };
+    },
+    methods: {
+        submit() {
+            firebase.auth().signInWithEmailAndPassword(this.email, this.password)
+            .then((res) => {
+                console.log(res);
+            })
+            .catch((e) => {
+                console.log(e);
+            });
+        },
+    },
 };
 </script>
 
