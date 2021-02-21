@@ -15,15 +15,21 @@ export default {
   data() {
     return {
       isLoginOpen: false,
+      isLoggedIn: false,
+      authUser: {},
     };
   },
   mounted() {
-    firebase.auth().onAuthStateChanged(function(user) {
+    firebase.auth().onAuthStateChanged((user) => {
       if(user) {
-        //
+        //diegoaarondd@rufo.com
+        this.isLoggedIn = true;
+        this.authUser = user;
 
       } else {
         //
+        this.isLoggedIn = false;
+        this.authUser = {};
 
       }
     });

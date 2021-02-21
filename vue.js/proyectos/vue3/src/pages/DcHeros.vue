@@ -13,7 +13,7 @@
   </ul>
 
   <form class="mt-10" @submit.prevent="addHero">
-    <input class="border rounded" v-model="newHero" placeholder="Type Hero Name here">
+    <input class="border rounded" v-model="newHero" placeholder="Type Hero Name here" ref="newHeroRef">
     <button class="border rounded bg-gradient-to-t from-red-700 to-pink-500 text-white" type="submit">Add Hero</button>
   </form>
 
@@ -27,6 +27,9 @@ export default {
             newHero: "",
              dcHeros: [{name: "Supergirl"}, {name: "Flash"}, {name: "Batman"}, {name: "Arrow"}, {name: "Superman"}],
         }
+    },
+    mounted() {
+      this.$refs.newHeroRef.focus();
     },
     computed: {
         herosCount() {
