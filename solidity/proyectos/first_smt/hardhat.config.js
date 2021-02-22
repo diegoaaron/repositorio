@@ -1,6 +1,6 @@
 require("@nomiclabs/hardhat-waffle");
 
-task("accounts", "Prints the list of accounts", async () => {
+task("accounts", "Imprime una lista de las cuentas", async () => {
   const accounts = await ethers.getSigners();
   let n = 1;
 
