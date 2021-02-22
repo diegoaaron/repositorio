@@ -1,10 +1,12 @@
 require("@nomiclabs/hardhat-waffle");
 
-task("accounts-sopi", "Prints the list of accounts", async () => {
+task("accounts", "Prints the list of accounts", async () => {
   const accounts = await ethers.getSigners();
+  let n = 1;
 
   for (const account of accounts) {
-    console.log(account.address);
+    console.log(n, "-", account.address);
+    n += 1;
   }
 });
 
