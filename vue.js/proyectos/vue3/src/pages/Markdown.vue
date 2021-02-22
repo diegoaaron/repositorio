@@ -17,7 +17,7 @@ import useDebounce from '../utilities/composition/useDebounce';
 export default {
   data() {
     return {
-      text: "**this is markdown app**",
+      text: "**this is markdown app**",  
       debounce: "",
     };
   },
