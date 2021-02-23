@@ -11,9 +11,13 @@ describe("Contador", function() {
 
         expect(await contador.getCount()).to.equal(100); //validando el constructor
 
-        expect(await contador.getNumber()).to.equal(34);
+        expect(await contador.getNumber()).to.equal(34); //
+
+        await contador.incrementCount();
+        expect(await contador.getCount()).to.equal(101); //valdiando 
         
-        
+        await contador.setCount(200);
+        expect(await contador.getCount()).to.equal(200);
         
     });
 });
