@@ -21,7 +21,7 @@ contract Blockgeeks {
 
     mapping(address => uint) private balances;
 
-    function balanceOf(address _owner) constant returns (uint balance) { // cantidad de bloques asociadas a una dirección
+    function balanceOf(address _owner) constant returns (uint balance) { // cantidad de NFC's asociadas a una dirección
         return balances[_owner];
     }
 
@@ -44,7 +44,7 @@ contract Blockgeeks {
         Approval(msg.sender, _to, _tokenId);
     }
 
-    function takeOwnership(uint256 _tokenId) {
+    function takeOwnership(uint256 _tokenId) { // premite que un tercero saque tokens de la cuenta de otro.
         require(tokenExists[_tokenId]);
 
         address oldOwner = ownerOf(_tokenId);
@@ -61,4 +61,51 @@ contract Blockgeeks {
 
         Transfer(oldOwner, newOwner, _tokenId);
     }
+
+    mapping(address => mapping(uint256 => uint256)) private ownerTokens;
+
+    function removeFromTokenList(address owner, uint256 _tokenId) private {
+        for(uint256 i=0; ownerTokens[owner][i] != _tokenId; i++) {
+            ownerTokens[owner][i] = 0;
+        }
+    }
+    function transfer(address _to, uint256 _tokenId) {
+        address currentOwner = msg.sender;
+
+        address newOwner = _to;
+
+        require(tokenExists[_tokenId]);
+        require(currentOwner == ownerOf(_tokenId));
+        require(currentOwner != newOwner);
+        require(newOwner != address(0));
+
+        removeFromTokenList(_tokenId);
+
+        balances[oldOwner] -= 1;
+
+        tokenOwners[_tokenId] = newOwner;
+
+        balances[newOwner] += 1;
+
+        Transfer(oldOwner, newOwner, _tokenId);
+
+    }
+
+    mapping(address => mapping(uint256 => uint256)) private ownerTokens;
+
+    function tokenOfOwnerByIndex(address _owner, uint256 _index) constant returns (uint tokenId) {
+        return ownerTokens[_owner][_index];
+    }
+
+    mapping(uint256 => string) tokenLinks;
+
+    function tokenMetadata(uint256 _tokenId) constant returns (string infoUrl) {
+        return tokenLinks[_tokenId];
+    }
+
+
+
+    event Approval(address indexed _owner, address indexed _approved, uint256 _tokenId);
+
 }
+
