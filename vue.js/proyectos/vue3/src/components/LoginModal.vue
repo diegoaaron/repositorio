@@ -7,7 +7,7 @@
                 <div class="z-30 m-auto bg-white p-2 rounded shadow w-1/3">
                     <div class="p-2 border" >
                         <h1 class="text-xl text-center">Login</h1>
-                        <GoogleLogin />
+                        <GoogleLogin @close-login-from-google="close" />
                         <p class="my-3 text-center">Or</p>
                         <form class="p-2 my-2" @submit.prevent="submit">
                             <div class="my-4">
