@@ -5,30 +5,30 @@ import "hardhat/console.sol";
 
 contract Blockgeeks {
 
-    function name() constant returns (string name) { // Nombre del NFT
+    function name() view returns (string name) { // Nombre del NFT
         return "Read Blockgeeks";
     }
 
-    function symbol() constant returns (string symbol) { // Symbolo del NFT
+    function symbol() view returns (string symbol) { // Symbolo del NFT
         return "BG";
     }
 
     uint256 private totalSupply = 50;
 
-    function totalSupply() constant returns (uint256 supply) { // Cantidad total de tokens
+    function totalSupply() view returns (uint256 supply) { // Cantidad total de tokens
         return totalSupply; 
     }
 
     mapping(address => uint) private balances;
 
-    function balanceOf(address _owner) constant returns (uint balance) { // cantidad de NFC's asociadas a una dirección
+    function balanceOf(address _owner) view returns (uint balance) { // cantidad de NFC's asociadas a una dirección
         return balances[_owner];
     }
 
     mapping(uint256 => address) private tokenOwners;
     mapping(uint256 => bool) private tokenExists;
 
-    function ownerOf(uint256 _tokenId) constant returns (address owner) { // obtener dirección propietara del token
+    function ownerOf(uint256 _tokenId) view returns (address owner) { // obtener dirección propietara del token
         require(tokenExists[_tokenId]);
         return tokenOwners[_tokenId];
     }
@@ -93,7 +93,7 @@ contract Blockgeeks {
 
     mapping(address => mapping(uint256 => uint256)) private ownerTokens;
 
-    function tokenOfOwnerByIndex(address _owner, uint256 _index) constant returns (uint tokenId) {
+    function tokenOfOwnerByIndex(address _owner, uint256 _index) view returns (uint tokenId) {
         return ownerTokens[_owner][_index];
     }
 

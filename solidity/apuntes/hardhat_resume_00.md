@@ -12,7 +12,10 @@
 `npx hardhat`
 
 #### instalación de componentes adicionales para trabajar con hardhat (se debe ejectuar desde la carpeta principal del proyecto)
-`npm install --save-dev @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs/hardhat-ethers ethers`
+`npm install -D @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs/hardhat-ethers ethers`
+
+#### se debe crear las carpetas básicas para programar
+`mkdir contracts scripts test`
 
 #### mostras las cuentas creadas por el framework para realizar pruebas
 `npx hardhat accounts`
@@ -32,5 +35,10 @@
 #### levantar interfaz de la blockchain de prueba creada por hardhat cuando se crea el proyecto (expone una interfaz JSON-RPC)
 `npx hardhat node`
 
+#### líneas básicas de un contrato
+```
+// SPDX-License-Identifier: MIT
 
+pragma solidity 0.7.5;
 
+```
