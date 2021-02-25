@@ -20,6 +20,7 @@ export default {
                 {title: "Slider", to:"/slider-carousel"},
                 {title: "Calculator ", to:"/calculator"},
                 {title: "Modal ", to:"/resuseable-modal"},
+                {title: "Chat ", to:"/chat"},
             ],
         };
     },
