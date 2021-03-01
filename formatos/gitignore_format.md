@@ -1,0 +1,3 @@
+## Formatos gitignore
+
+#### proyectos Django

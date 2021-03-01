@@ -1,25 +1,34 @@
 ## Comandos de referencia
 
-#### crear un archivo 'package.json' aceptando todo
-`npm init -y`
+#### actualizar pip3
+`sudo pip3 install --upgrade pip setuptools wheel`
 
-#### instalación de vue cli
-`npm install -g @vue/cli`
+#### crear un entorno virtual
+`python3 -m venv env`
 
-#### instalar las dependencias del proyecto (ejecutarlo desde la carpeta principal del proyecto)
-`npm install`
+#### activar el entorno virtual
+`source env/bin/activate`
+`. env_name/bin/activate`
 
-#### instalar un paquete y agregarlo como dependencia de desarrollo
-`npm install [nombreDelPaquete] --save-dev`
-`npm install -D [nombreDelPaquete]`
+#### desactivar el entorno virtual
+`deactivate`
 
-#### cear proyecto con vue cli
-`vue create project_name`
+#### instalar Django (dentro del entorno virtual)
+```python
+pip install Django  # instala la última versión del paquete
+pip install "Django==3.1.5" # instala la versión especificada
+pip install "Django~=3.0.0" # instala la versión más actual de la versión indicada
+```
 
-#### arrancar servidor interno de vue cli para levantar el proyecto
-`vue-cli-service serve`
-`npm run serve`
+#### crear un proyecto Django
+`django-admin.py startproject myproject`
 
-#### ejecutar servidor json para pruebas (desde el proyecto)
-`npx json-server --watch data/db.json`
+#### instalar paquetes desde un archivo
+`pip install -r requirements/dev.txt`
+
+#### crear lista de paquetes utilizados en el proyecto
+`pip freeze > requirements/dev.txt`
+
+#### crear una app 
+`python manage.py startapp firstApp`
 
