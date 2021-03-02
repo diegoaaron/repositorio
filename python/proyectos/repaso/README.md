@@ -6,7 +6,10 @@
 
 - variables
 - operadores
-- sentencias condicionales
+- sentencias condicionales (if)
+- sentencias recursivas (for, while)
+- typecasting (casteo de variables)
+- diccionarios
 - 
 
 ### Herramientas utilizadas
