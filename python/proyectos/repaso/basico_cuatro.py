@@ -58,3 +58,23 @@ print(user_details)
 
 user_details["profession"] = "Software Developer 2"
 print(user_details)
+
+user_details["age"] = "100"
+print(user_details)
+
+user_details.pop("age")
+print(user_details)
+
+del user_details['profession']
+print(user_details)
+
+del user_details
+
+dictA = {
+    "fname": "Sharvin",
+    "lname": "Shah",
+    "profession": "Developer"
+}
+
+dictB = dictA.copy()
+print(dictB)

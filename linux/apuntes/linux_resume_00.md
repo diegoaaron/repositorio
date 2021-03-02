@@ -24,7 +24,8 @@ journalctl -b
 journalctl --list-boots
 # 
 
-
+#### listar carpetas con una profundidad de 5 y evitando el directorio 'env'
+`tree -d -L 5 -I env`
 
 
 

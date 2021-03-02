@@ -1,8 +1,8 @@
 ## Madlib
 
-**resumen**: pequeña aplicación de consola que nos permite mostrar un texto aleatorio y modificable.
+**resumen**: aplicación de consola que permite mostrar un texto aleatorio y modificable.
 
-### Temas revisados
+### Puntos revisados
 
 - funciones
 - modulos

@@ -45,7 +45,7 @@ print(perimetroRectangulo.perimetro())
 
 ```python
 class Calculadora:
-    pi = 3.14
+    pi = 3.14 # atributo estático
 
     @staticmethod
     def suma(a, b): # método de clase estático

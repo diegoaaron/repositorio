@@ -9,7 +9,12 @@
 - sentencias condicionales (if)
 - sentencias recursivas (for, while)
 - typecasting (casteo de variables)
-- diccionarios
+- diccionarios {}
+- listas []
+- tuplas ()
+- sets {} 
+- funciones, args y kwargs
+- scope | alcance global y local
 - 
 
 ### Herramientas utilizadas
