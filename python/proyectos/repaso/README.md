@@ -15,7 +15,10 @@
 - sets {} 
 - funciones, args y kwargs
 - scope | alcance global y local
-- 
+- expresiones lambda
+- list comprehension
+- POO, propiedades, métodos, self
+- herencia, polimorfismo, 
 
 ### Herramientas utilizadas
 
