@@ -1,4 +1,5 @@
 ### Configuración para entorno de desarrollo de escritorio
+> poner la carpeta .vscode dentro de la carpeta principal del proyecto
 ```json
 {
     "python.linting.pylintEnabled": true,
