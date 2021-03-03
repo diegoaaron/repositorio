@@ -3,6 +3,14 @@ from django.db import models
 from datetime import date
 from django.utils import timezone
 
+
+# ----------------------------------------
+from django.core.validators import MinLengthValidator
+from django.core.exceptions import ValidationError
+
+# ----------------------------------------
+
+
 def default_city():
     return "San Diego"
 
@@ -18,7 +26,7 @@ class Store(models.Model):
     state = models.CharField(max_length=21)
     
     def __str__(self):
-        return "%s (%s,%s)" % (self.name, self.city, self.state)
+        return f"{self.name} ({self.city}, {self.state})"
 
 
 #    date = models.DateField(default=date.today)
@@ -36,11 +44,29 @@ ITEM_SIZES = (
     ('P', 'Portion'),
 )
 
+
+def calorie_watcher(value):
+    if value > 5000:
+        raise ValidationError(f"Whoa! calories are {value}s? We try to serve healthy food, try somethin less than 5000!",)
+
+
 class Menu(models.Model):
     name = models.CharField(max_length=30)
 
 class Item(models.Model):
     menu = models.ForeignKey(Menu, on_delete=models.CASCADE)
-    name = models.CharField(max_length=30)
-    description = models.CharField(max_length=100)
+    name = models.CharField(max_length=30, verbose_name="Item name")
+    description = models.CharField(max_length=100, db_index=True)
     size = models.CharField(choices=ITEM_SIZES, max_length=1)
+
+
+
+
+
+
+
+
+
+
+
+
