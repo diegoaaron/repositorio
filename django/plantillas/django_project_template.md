@@ -1,4 +1,5 @@
-#### Estructura genérica de un proyecto
+## Estructura genérica de un proyecto
+
 ```shell
 $~/Documentos/django/myproject_website/
 .

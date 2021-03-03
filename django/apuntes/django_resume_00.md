@@ -33,9 +33,10 @@ pip install "Django~=3.0.0" # instala la versión más actual de la versión ind
 
 ### crear una app 
 `python manage.py startapp firstApp`
+`django-admin startapp firstApp` || permite crear la aplicación en sub directorios
 
 
-## Base de datos
+## Modelo
 
 ### generar la estructura de migración para un modelo
 `python manage.py makemigrations`
