@@ -19,7 +19,8 @@
 - list comprehension
 - POO, propiedades, métodos, self
 - herencia, polimorfismo, encapsulación
-- 
+- try catch
+- JSON
 
 ### Herramientas utilizadas
 

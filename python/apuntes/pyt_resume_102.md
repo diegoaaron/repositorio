@@ -46,8 +46,6 @@ def control_flujo_for(inicio, fin):
 control_flujo_for(10, 50)
 ``` 
 
-## Sentencias BREAK y CONTINUE
-
 **break**: sirve para detener las sentencias de control de flujo (if, for, while). Si hay una sentencia *else* esta no se ejecutara si la sentencia *break* se ejecuta primero.
 
 ```python
