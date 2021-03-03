@@ -18,7 +18,8 @@
 - expresiones lambda
 - list comprehension
 - POO, propiedades, métodos, self
-- herencia, polimorfismo, 
+- herencia, polimorfismo, encapsulación
+- 
 
 ### Herramientas utilizadas
 

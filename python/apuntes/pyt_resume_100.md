@@ -10,7 +10,7 @@
 - [explicación complementaria 2](https://www.geeksforgeeks.org/name-mangling-in-python/)
 - [explicación complementaria 3](https://medium.com/analytics-vidhya/python-name-mangling-and-how-to-use-underscores-e67b529f744f) 
 
-**dunder o magic methods**: es como se denomina a los métodos que inician y terminan con dos guiones bajo y permiten sobrecargar(personalizar) el comportamiento del objeto.
+**dunder o magic methods**: es como se denomina a los métodos que inician y terminan con dos guiones bajo y permiten sobrecargar (personalizar) el comportamiento del objeto.
 
 ```python
 class Friend:
