@@ -1,6 +1,6 @@
 # Comandos de referencia
 
-## Implementación
+## Entorno de trabajo
 
 ### actualizar pip3
 `sudo pip3 install --upgrade pip setuptools wheel`
