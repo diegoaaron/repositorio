@@ -17,7 +17,7 @@ nombre = input("Ingrese su nombre: ")
 print(f"Su nombre es {nombre}")
 ``` 
 
-**escape de caracteres**: El caracter backslash permite escapar caracteres usados por lenguaje. La comilla simple se escapa al estar entre comillas dobles y viceversa
+**escape de caracteres**: el caracter backslash permite escapar caracteres usados por lenguaje. La comilla simple se escapa al estar entre comillas dobles y viceversa
 
 ```python
 print("Podemos ver el \\ backslash")
@@ -30,3 +30,4 @@ print("What's your name?")
 print('What"s your name?') 
 ``` 
 
+**dir()**: la función 
