@@ -7,7 +7,7 @@
 - [explicación complementaria 3](https://stackoverflow.com/questions/64579610/how-does-the-concept-of-encapsulation-work-in-python?noredirect=1#comment114190784_64579610)
 - [explicación complementaria 4](https://www.genbeta.com/desarrollo/cazadores-de-mitos-las-propiedades-privadas-en-python)
 
-**método estático**: característica para un atributo o método de ser unicos en todos los objetos de la clase (no necesitan ser instanciados para ser accedidos). Los atributos de la clase que tienen asignado un valor se vuelven estáticas. Para definir un método como estático se utiliza el decorador *@staticmethod* 
+**método | atributo estático**: característica para un atributo o método de ser unicos en todos los objetos de la clase (no necesitan ser instanciados para ser accedidos). Los atributos de la clase que tienen asignado un valor se vuelven estáticas. Para definir un método como estático se utiliza el decorador *@staticmethod* 
 
 ```python
 class Calculadora:
