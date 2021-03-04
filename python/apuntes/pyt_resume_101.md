@@ -22,11 +22,11 @@ print("What's your name?")
 print('What"s your name?') 
 ``` 
 
-> El caracter backslash permite escapar caracteres usados en el lenguaje y mostrarlos en consola
+> El caracter backslash permite escapar caracteres usados por lenguaje
 
 ```python
 print("Podemos ver el \\ backslash")
-print("Esta linea \n se mostrara con un salto de linea") 
+print("Esta cadena \n se mostrara con un salto de linea") 
 print("Utilizando la tabulación \t por medio de escape de caracteres") 
 print("Utilizando varias lineas \
 para definir el texto a imprimir")

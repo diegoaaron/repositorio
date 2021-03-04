@@ -62,43 +62,49 @@ else:
 **for**: ejecuta un conjunto de instrucciones dentro de un rango dado.
 
 ```python
+# ejemplo 1
+
 for i in range(0, 10):
-    print(f" valor: {i}")
+    print(f"valor: {i}")
+
+# ejemplo 2
+
+for i in range (2, 9):
+    print(f"valor: {i}")
 else:
     print("El loop ha terminado")
+
 ``` 
 
-**break**: sirve para detener las sentencias de control de flujo (if, for, while). Si hay una sentencia *else* esta no se ejecutara si la sentencia *break* se ejecuta primero.
+**break**: detiene las sentencias de control de flujo (if, for, while). Si hay una sentencia *else* esta no se ejecutara si la sentencia *break* se ejecuta primero.
 
 ```python
-def prueba_break():
-    while True:
+while True:
 
-        s = input('Ingrese algo: ')
-        
-        if s == 'quit':
-            break
-        
+    s = input('Ingrese algo: ')
+    
+    if s == 'quit':
+        break
+    else:
         print(f"el texto {s} ingresado es incorrecto, su medida es", len(s), "sigua intentando")
-
-prueba_break()
+    
+    contador += 1
+    print(f"Intento: {contador}")
 ``` 
 
 **continue**: sirve para saltar el resto de sentencias dentro de una sentencia de control de flujo. 
 
 ```python
-def pruebacontinue():
-    while True:
-        s = input("Ingrese algo: ")
+while True:
+    s = input("Ingrese algo: ")
 
-        if len(s) < 3:
-            print("Texto pequeño")
-            continue
+    if len(s) < 3:
+        print("texto pequeño - sentencia 'continue' ejecutada")
+        continue
 
-        print("sentencia 'continue' saltada")
-        if s == 'quit':
-            print("adivino la palabra")
-            break
+    print("sentencia 'continue' no ejecutada")
 
-pruebacontinue()
+    if s == 'quit':
+        print("adivino la palabra")
+        break
 ``` 
