@@ -9,7 +9,7 @@ edad = 1
 print(f"El perro {nombre} tiene {edad} años")
 ``` 
 
-**input()**: función que permite el ingreso de valores por consola
+**input()**: función integrada que permite el ingreso de valores por consola
 
 ```python
 nombre = input("Ingrese su nombre: ")
@@ -30,4 +30,38 @@ print("What's your name?")
 print('What"s your name?') 
 ``` 
 
-**dir()**: la función 
+**dir()**: función integrada que muestra los nombres que tiene definido un *módulo*, retornando una lista ordenada de cadenas.
+
+```python
+# Fibonacci numbers module
+
+def fib(n):    # write Fibonacci series up to n
+    a, b = 0, 1
+    while a < n:
+        print(a, end=' ')
+        a, b = b, a+b
+    print()
+
+def fib2(n):   # return Fibonacci series up to n
+    result = []
+    a, b = 0, 1
+    while a < n:
+        result.append(a)
+        a, b = b, a+b
+    return result
+
+>>> import fibo
+
+>>> dir(fibo)
+['__name__', 'fib', 'fib2']
+```
+> Si se utiliza sin parametros se mostrara una lista de todos los nombres definidos en el espacio de trabajo
+
+```python
+>>> a = [1, 2, 3, 4, 5]
+>>> import fibo
+>>> fib = fibo.fib
+>>> dir()
+['__builtins__', '__name__', 'a', 'fib', 'fibo', 'sys']
+```
+
