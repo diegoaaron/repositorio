@@ -12,10 +12,12 @@
   - parametros, argumentos, return, *args y *kwargs, docstring
 - Sentencias de control de flujo - [link](https://github.com/diegoaaron/repositorio/blob/main/python/apuntes/pyt_resume_04.md)
   - if, elif, else, while, for, break y continue
+- Módulos y paquetes - [link](https://es.stackoverflow.com/questions/32165/qu%C3%A9-es-if-name-main)
+  - módulo, paquete, \_\_name\_\_ == "\_\_main\_\_"
 
 ## Apuntes complementarios
 
 - Particularidades de Python - [link](https://github.com/diegoaaron/repositorio/blob/main/python/apuntes/pyt_resume_100.md#particularidades-de-python)
   - name mangling, dunder o magic methods
 - Herramientas de consola - [link](https://github.com/diegoaaron/repositorio/blob/main/python/apuntes/pyt_resume_101.md#herramientas-de-consola)
-  - f-strings, input(), escape de caracteres
+  - f-strings, input(), escape de caracteres, dir()
