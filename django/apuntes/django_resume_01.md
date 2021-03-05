@@ -20,7 +20,7 @@
   - el atributo principal de cada entidad se le denominara *llave primaria* en el modelo relacional y se representara con las letras *PK - Primary Key* 
   - las relaciones entre dos entidades se representaran poniendo el atributo principal de una entidad como campo en la otra, se denominara *llave foranea* y se representara con las letras *"FK - Foreign Key"*, todo esto dependiendo el tipo de cardinalidad definido en el modelo E-R. 
 
-[explicación complementaria 2](http://contenidos.sucerman.com/nivel2/web1/unidad2/leccion4.html)
+[explicación complementaria 1](http://contenidos.sucerman.com/nivel2/web1/unidad2/leccion4.html)
 
-![entidad y atributos](https://github.com/diegoaaron/repositorio/blob/main/django/apuntes/entidad_atributos.png){width=500 height=150}
-![relación y cardinalidad](https://github.com/diegoaaron/repositorio/blob/main/django/apuntes/relacion_cardinalidad.png){width=500 height=250}
+![entidad y atributos](https://github.com/diegoaaron/repositorio/blob/main/django/apuntes/entidad_atributos.png)
+![relación y cardinalidad](https://github.com/diegoaaron/repositorio/blob/main/django/apuntes/relacion_cardinalidad.png)
