@@ -35,6 +35,14 @@ pip install "Django~=3.0.0" # instala la versión más actual de la versión ind
 `python manage.py startapp firstApp`
 `django-admin startapp firstApp` || permite crear la aplicación en sub directorios
 
+### crear un usuario de administración
+`python manage.py createsuperuser`
+
+### levantar el proyecto
+`python manage.py runserver`
+
+### interactuar por consola con Django
+`python manage.py shell`
 
 ## Modelo
 
