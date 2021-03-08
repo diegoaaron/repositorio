@@ -1,6 +1,6 @@
 # Comandos de referencia
 
-## Entorno de trabajo
+## Administración del entorno de trabajo
 
 ### actualizar pip3
 `sudo pip3 install --upgrade pip setuptools wheel`
@@ -44,7 +44,7 @@ pip install "Django~=3.0.0" # instala la versión más actual de la versión ind
 ### interactuar por consola con Django
 `python manage.py shell`
 
-## Modelo
+## Manejo del modelo
 
 ### generar la estructura de migración para un modelo
 `python manage.py makemigrations`
