@@ -4,7 +4,7 @@
 
 ### Puntos revisados
 
-- x
+- listas
 
 ### Herramientas utilizadas
 
