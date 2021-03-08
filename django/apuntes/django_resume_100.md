@@ -1,4 +1,4 @@
-# Conceptos utilizados en los modelos
+# Conceptos de base de datos
 
 ## Teoria de base de datos
 
@@ -22,5 +22,10 @@
 
 [explicación complementaria 1](http://contenidos.sucerman.com/nivel2/web1/unidad2/leccion4.html)
 
+### Representación gráfica de una Entidad y sus atributos
+
 ![entidad y atributos](https://github.com/diegoaaron/repositorio/blob/main/django/apuntes/entidad_atributos.png)
+
+### Representación gráfica de Relación y Cardinalidad entre Entidades
+
 ![relación y cardinalidad](https://github.com/diegoaaron/repositorio/blob/main/django/apuntes/relacion_cardinalidad.png)

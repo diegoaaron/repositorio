@@ -1,8 +1,8 @@
 ## Apuntes teóricos
 
 - Comandos de referencia - [link](https://github.com/diegoaaron/repositorio/blob/main/django/apuntes/django_resume_00.md#comandos-de-referencia)
-  - entorno de trabajo, modelo
-- Conceptos sobre los modelos - [link]()
+  - administración del entorno de trabajo, manejo del modelo
+- Conceptos sobre los modelos - [link](https://github.com/diegoaaron/repositorio/blob/main/django/apuntes/django_resume_03.md)
   - QuerySet
 
 ## Apuntes complementarios
