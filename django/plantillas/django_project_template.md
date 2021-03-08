@@ -24,14 +24,9 @@ $~/Documentos/django/myproject_website/
         │   ├── apps
         │   │   ├── core
         │   │   │   ├── migrations
-        │   │   │   └── __pycache__
         │   │   └── magazine
         │   │       ├── migrations
-        │   │       │   └── __pycache__
-        │   │       └── __pycache__
-        │   ├── __pycache__
         │   ├── settings
-        │   │   └── __pycache__
         │   ├── site_static
         │   │   └── site
         │   │       ├── css
@@ -42,5 +37,4 @@ $~/Documentos/django/myproject_website/
         │   └── templates
         ├── requirements
         └── static
-
 ```
