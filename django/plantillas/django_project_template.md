@@ -1,14 +1,12 @@
 ## Estructura genérica de un proyecto Django
 
 ```shell
-$~/Documentos/django/myproject_website/
+$~/Documentos/django/myproject_base/
 .
-├── commands
-├── db_backups
-├── env
-├── mockups
-└── src
-    └── django-myproject
+├── env/
+├── mockups/
+└── src/
+    └── myproject_django/
         ├── externals
         │   ├── apps
         │   │   ├── cms
@@ -20,8 +18,8 @@ $~/Documentos/django/myproject_website/
         │       └── twython
         ├── locale
         ├── media
-        ├── myproject
-        │   ├── apps
+        ├── myproject/
+        │   ├── apps/
         │   │   ├── core
         │   │   │   ├── migrations
         │   │   └── magazine
