@@ -1,103 +1,70 @@
-## Elementos del paradigma de programación orientado a objetos
+# Detalles sobre las funciones
 
-**variable**: es un espacio en memoria que almace una valor.
-
-**función**: es un conjunto de código agrupado bajo un nombre y que puede ser invocado.
-
-**clase**: es un molde para crear objetos. La nomenclatura para el nombre de las clases utiliza la notación *CamelCase*.
-  - **atributos**: son las características que tendran los objetos. Por ejemplo nombre, edad, etc.
-  - **métodos**: son las funcionalidades que tendran los objetos. Por ejemplo *mostrar_nombre()*, *calcular_edad()*, etc. Un método es una *función* declarada dentro de una *clase* y por ende debe tener como primer *parámetro* la palabra *self*. La ejecución de un método puede cambiar el estado de un objeto.
-    - **método constructor**: es el primer método que entra en funcionamiento al instanciar un objeto.
-
-**objeto**: es la materialización de una clase. La acción de crear un objeto se denomina *instanciar*. 
-  - **estado de un objeto**: es el conjunto de datos y objetos relacionados con un objeto en un momento dado. Un objeto puede tener múltiples estados a lo largo de su existencia. 
+**funcion**: es una pieza de software reutilizable.
+- parametros: elementos definidos para introducir información en la función
+- argumentos: información brindada a la función cuando es invocada.
+- **return**: sentencia que permite retornar un valor al finalizar la ejecución de una función. Si no se indica, por defecto la función retorna *None*
 
 ```python
-class PerroPeruano:
+def suma(num1, num2): # 'num1' y 'num2' son parametros
+    total = num1 + num2
 
-    def __init__(self, nombre, color): # método constructor 
-        self.nombre = nombre # atributo
-        self.color = color
+    return total
 
-    def avanzar(self): # método 
-        print("El perro", self.nombre, "está avanzando")
-
-    def detenerse(self):
-        texto = "El perro de color " + self.color + " se ha detenido"
-        return texto
-    
-    def molestar(self, ruido):
-        print("El perro esta haciendo", ruido)
-
-
-primerPerro = PerroPeruano("sparky", "negro") # Creación de un objeto (instanciación de la clase 'PerroPeruano')
-print("El perro se llama", primerPerro.nombre) # Mostrando un atributo del objeto creado
-primerPerro.avanzar() # Ejecutando un método del objeto creado 
+print(suma(4,5)) # '4' y '5' son argumentos
 ```
 
-**herencia**: mecanismo por el cual una clase (hija) hereda el código de otra clase (padre). Python soporta la herencia múltiple.
+**funciones con parametros por defecto**: el valor de los parametros son utilizados cuando al invocar la función no se definen argumentos para estos parámetros.
 
 ```python
-class Persona:
+def decir(mensaje, veces=1):
+    print(mensaje * veces)
 
-    def __init__(self, nombre, apellido):
-        self.nombre = nombre
-        self.apellido = apellido
-    
-    def saludar(self):
-        print("Hola, mi nombre es", self.nombre)
-
-class Estudiante(Persona):
-
-    def __init__(self, nombre, apellido, grado_academico):
-        super().__init__(nombre, apellido) # llamando al constructor de la clase padre 
-        self.grado_academico = grado_academico 
-
-    def mostrar_horario(self):
-        print("Mi horario aun no esta definido")
-
-primerEstudiante = Estudiante("Miguel", "Eliceo", 21) 
-primerEstudiante.saludar() 
-primerEstudiante.mostrar_horario()
+decir("hola",3)
+decir("adios")
 ```
 
-**polimorfismo**: mecanismo que permite a diferentes clases, usar el mismo nombre para un método y este tenga comportamientos diferentes. 
+**comodin \*args**: permite que se agreguen argumentos ilimitados en una función los cuales se almacenan en una tupla bajo el nombre *args*. Se debe poner al final.
 
 ```python
-class Persona:
+def sumatoria(n, *args):
+    print("n vale:", n)
 
-    def __init__(self, sexo, edad):
-        self.sexo = sexo
-        self.edad = edad
+    for a in args:
+        print("item:", a)
 
-    def saludar(self):
-        print("Una persona te saluda")
-
-class Estudiante(Persona):
-
-    def __init__(self, sexo, edad, grado_academico):
-        super().__init__(sexo, edad)
-        self.grado_academico = grado_academico
-
-    def saludar(self):
-        print("Una estudiante te saluda")
-    
-class Trabajador(Persona):
-
-    def __init__(self, sexo, edad, cargo_laboral):
-        super().__init__(sexo, edad)
-        self.cargo_laboral = cargo_laboral
-
-    def saludar(self):
-        print("Una trabajador te saluda")
-
-primeraPersona = Persona("masculino", 30) 
-primeraPersona.saludar() 
-primerEstudiante = Estudiante("masculino", 30, "sanmarquino")
-primerEstudiante.saludar() 
-primerTrabajador = Trabajador("masculino", 30, "operario")
-primerTrabajador.saludar()
+sumatoria(10, 100, 200, 300)
 ```
-- [explicación complementaria 1](https://pythonpedia.com/es/tutorial/5100/polimorfismo)
-- [explicación complementaria 2](https://youtu.be/Finb7JZJcWE?t=305)
 
+**comodin \*\*kwargs**: permite que se agreguen argumentos ilimitados en la función los cuales se almacenan en un diccionario de nombre *kwargs*. Se debe poner al final.
+
+```python
+def calculos(n, **kwargs):
+    print("n vale: ", n)
+
+    for k,w in kwargs.items():
+        print("llave:", k, "valor:", w)
+
+calculos(10, primero=100, segundo=200, tercero=300)
+```
+
+**docstring**: característica que permite la documentación de una función de forma, utilizando las comillas triples.
+
+```python
+def print_max2(x, y):
+    ''' Imprime el máximo numero entre 2 valores
+        x: primer valor
+        y: segundo valor
+
+        Los números ingresados debe ser entero'''
+    if x > y:
+        return x
+    elif y > x:
+        return y
+    else:
+        return "empate"
+
+print(print_max2.__doc__)
+print(print_max2(50, 30))
+print(print_max2(10, 20))
+```

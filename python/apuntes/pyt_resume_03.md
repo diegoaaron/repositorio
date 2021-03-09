@@ -1,70 +1,61 @@
-## Detalles sobre las funciones
+## Módulos y paquetes
 
-**funcion**: es una pieza de software reutilizable.
-- parametros: elementos definidos para introducir información en la función
-- argumentos: información brindada a la función cuando es invocada.
-- **return**: sentencia que permite retornar un valor al finalizar la ejecución de una función. Si no se indica, por defecto la función retorna *None*
+**modulo**: es un archivo con extensión *.py* que almacena código Python. Este archivo puede poser variables, constantes, condiciones, funciones, clases, métodos etc...
 
 ```python
-def suma(num1, num2): # 'num1' y 'num2' son parametros
-    total = num1 + num2
+# modulo: user.py
+class User():
+    def __init__(self, username):
+        self.username = username
 
-    return total
-
-print(suma(4,5)) # '4' y '5' son argumentos
+    def hola(self):
+        print (f"Hola {self.username}")
 ```
 
-**funciones con parametros por defecto**: el valor de los parametros son utilizados cuando al invocar la función no se definen argumentos para estos parámetros.
+**paquetes** consiste en la agrupación de módulos dentro de una carpeta (directorio). Para considerarse un paquete, el directorio debe tener de forma adicional un archivo con el nombre *\_\_init\_\_.py* y ademas al menos un modulo.
 
 ```python
-def decir(mensaje, veces=1):
-    print(mensaje * veces)
-
-decir("hola",3)
-decir("adios")
+package/
+    __init__.py
+    archivo1.py
+    archivo2.py
+    archivo3.py
+    subpackage/
+        __init__.py
+        submodulo.py
 ```
 
-**comodin \*args**: permite que se agreguen argumentos ilimitados en una función los cuales se almacenan en una tupla bajo el nombre *args*. Se debe poner al final.
+> El archivo \_\_init\_\_.py puede contener las importaciones de los modulos para facilitar el acceso a estos módulos desde el archivo que es llamado.
 
 ```python
-def sumatoria(n, *args):
-    print("n vale:", n)
+# En el archivo package/__init__.py
+from archivo1 import Archivo
 
-    for a in args:
-        print("item:", a)
-
-sumatoria(10, 100, 200, 300)
+# En tu programa que utiliza el paquete package
+from package import Archivo
 ```
 
-**comodin \*\*kwargs**: permite que se agreguen argumentos ilimitados en la función los cuales se almacenan en un diccionario de nombre *kwargs*. Se debe poner al final.
+- [explicación complementaria 1](https://bitybyte.github.io/Organzando-codigo-Python/)
+- [explicación complementaria 2](https://pywombat.com/articles/modulos-paquetes-python)
+
+**\_\_name\_\_ == "\_\_main\_\_"**: todo modulo tiene un atributo especial llamado *\_\_name\_\_* que define el espacio de nombres en el que se está ejecutando. Es usado para identificar de forma única al módulo cuando es importado. Por otra parte *"\_\_main\_\_"* es el nombre del ámbito en el que se ejecuta el código de nivel superior (el programa principal)
+> Es decir, si tienes un archivo llamado *mi_modulo.py*, si lo ejecutamos como programa principal el atributo *\_\_name\_\_* tendra el valor de *"\_\_main\_\_"*, si lo usamos importándolo desde otro módulo (import mi_modulo) el atributo *\_\_name\_\_* tendra el valor *mi_modulo*.
+
+> Básicamente, lo que haces usando `if __name__ == “__main__”`: es ver si el módulo ha sido ejecutado directamente o no (importado). Si se ha ejecutado como programa principal se ejecuta el código dentro del condicional.
 
 ```python
-def calculos(n, **kwargs):
-    print("n vale: ", n)
+# archivo mi_modulo.py
 
-    for k,w in kwargs.items():
-        print("llave:", k, "valor:", w)
+def hacer_algo():
+    print("hola")
 
-calculos(10, primero=100, segundo=200, tercero=300)
+if __name__ == "__main__":
+    hacer_algo()
+
+# si ejecutamos este módulo con python mi_modulo.py, la función se ejecutara
 ```
 
-**docstring**: característica que permite la documentación de una función de forma, utilizando las comillas triples.
+[explicación complementaria 1](https://es.stackoverflow.com/questions/32165/qu%C3%A9-es-if-name-main)
 
-```python
-def print_max2(x, y):
-    ''' Imprime el máximo numero entre 2 valores
-        x: primer valor
-        y: segundo valor
+[explicación complementaria 2](https://alvarohurtado.es/2020/11/16/que-hace-if-__name__-__main__-en-python/)
 
-        Los números ingresados debe ser entero'''
-    if x > y:
-        return x
-    elif y > x:
-        return y
-    else:
-        return "empate"
-
-print(print_max2.__doc__)
-print(print_max2(50, 30))
-print(print_max2(10, 20))
-```

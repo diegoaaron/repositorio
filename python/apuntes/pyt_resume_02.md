@@ -1,66 +1,110 @@
-## Elementos del paradigma de programación orientado a objetos (continuación)
+## Sentencias de control de flujo
 
-**encapsulación**: mecanismo que permite definir el grado de acceso y modificación de los atributos y métodos de una clase. En Python todos los atributos y métodos son públicos por lo cual no existe la *encapsulación*. Por otra parte si tiene una característica denominada *name mangling* que simulan en cierta forma este comportamiento.
-
-- [explicación complementaria 1](https://stackoverflow.com/questions/62688315/private-attributes-in-python-and-pep8)
-- [explicación complementaria 2](https://stackoverflow.com/questions/1641219/does-python-have-private-variables-in-classes)
-- [explicación complementaria 3](https://stackoverflow.com/questions/64579610/how-does-the-concept-of-encapsulation-work-in-python?noredirect=1#comment114190784_64579610)
-- [explicación complementaria 4](https://www.genbeta.com/desarrollo/cazadores-de-mitos-las-propiedades-privadas-en-python)
-
-**método | atributo estático**: característica para un atributo o método de ser unicos en todos los objetos de la clase (no necesitan ser instanciados para ser accedidos). Los atributos de la clase que tienen asignado un valor se vuelven estáticas. Para definir un método como estático se utiliza el decorador *@staticmethod* 
+**if - elif - else**: ejecuta un conjunto de instrucciones si se cumple la condicion.
 
 ```python
-class Calculadora:
-    pi = 3.14 # atributo estático
+valor1 = 10
+valor2 = 11
 
-    @staticmethod
-    def suma(a, b): # método de clase estático
-        return a + b
+# forma 1
 
-    @staticmethod
-    def multi(a, b):
-        return a * b
+if valor1 == valor2:
+    print(f"El {valor1} es igual al {valor2}")
+elif valor1 > valor2:
+    print(f"El {valor1} es mayor al {valor2}")
+else:
+    print(f"El {valor1} es menor al {valor2}")
 
-    def mostrar_variables(self, a, b): # método de clase 
-        print("a:", a, "b:", b)
+# forma 2
 
-print("La suma de 4 y 5 usando un método estatico es:", Calculadora.suma(4, 5))
-primeracalculadora = Calculadora()
-print("La suma de 5 y 6 es:", primeracalculadora.suma(5, 6))
-```
+num_a = 5
+num_b = 4
 
-- [explicación complementaria 1](https://blog.nearsoftjobs.com/tipos-de-m%C3%A9todos-en-python-cls-vs-self-d6da1e08efa8)
+if num_a > num_b: print(f"{num_a} is greater than {num_b}")
+``` 
 
-**clase abstracta**: mecanismo que permite definir clases y métodos que deben ser obligatoriamente implementados en sus clases hijas. Las clases abstractas no se instancian. Python utiliza el módulo *abc* para definir clases abstractas
+**while**: ejecuta un conjunto de instrucciones mientras la condicion sea verdad.
 
 ```python
-from abc import ABCMeta, abstractmethod
+# ejemplo 1
 
-class Figura(metaclass=ABCMeta):
-  @abstractmethod # decorador que define el método como abstracto
-  def area(self):
-    pass
+estado = True 
+contador = 0
+valor1 = 5
 
-  @abstractmethod
-  def perimetro(self):
-    pass
+while estado:
+    if valor1 > 10:
+        estado = False
+    
+    valor1 += 1 
+    contador += 1
 
-class Rectangulo(Figura):
+print(f"El flujo realizo {contador} iteraciones antes de terminar")
 
-  def __init__(self, ancho, altura):
-    self.ancho = ancho
-    self.altura = altura
+# ejemplo 2
 
-  def area(self):
-    return self.altura * self.ancho
+validador = True
+num_a = 0
 
-  def perimetro(self):
-    return 2 * (self.altura * self.ancho)
+while validador:
+    
+    if num_a > 10:
+        validador = False
+        
+    print(f" valor: {num_a}")
+    num_a += 1
 
-perimetroRectangulo = Rectangulo(3, 5)
-print(perimetroRectangulo.area())
-print(perimetroRectangulo.perimetro())
-```
+else:
+    print("La secuencia ha finalizado")
 
-- [explicación complementaria 1](https://www.youtube.com/watch?v=H9SnCQvoNHk)
-- [explicación complementaria 2](https://www.3engine.net/wp/2015/02/clases-abstractas-en-python/)
+``` 
+
+**for**: ejecuta un conjunto de instrucciones dentro de un rango dado.
+
+```python
+# ejemplo 1
+
+for i in range(0, 10):
+    print(f"valor: {i}")
+
+# ejemplo 2
+
+for i in range (2, 9):
+    print(f"valor: {i}")
+else:
+    print("El loop ha terminado")
+
+``` 
+
+**break**: detiene las sentencias de control de flujo (if, for, while). Si hay una sentencia *else* esta no se ejecutara si la sentencia *break* se ejecuta primero.
+
+```python
+while True:
+
+    s = input('Ingrese algo: ')
+    
+    if s == 'quit':
+        break
+    else:
+        print(f"el texto {s} ingresado es incorrecto, su medida es", len(s), "sigua intentando")
+    
+    contador += 1
+    print(f"Intento: {contador}")
+``` 
+
+**continue**: sirve para saltar el resto de sentencias dentro de una sentencia de control de flujo. 
+
+```python
+while True:
+    s = input("Ingrese algo: ")
+
+    if len(s) < 3:
+        print("texto pequeño - sentencia 'continue' ejecutada")
+        continue
+
+    print("sentencia 'continue' no ejecutada")
+
+    if s == 'quit':
+        print("adivino la palabra")
+        break
+``` 

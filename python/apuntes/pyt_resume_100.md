@@ -1,66 +1,25 @@
-## Particularidades de Python 
+# Conceptos de programación
 
-**name mangling**: mecanismo de Python que ayuda a evitar las colisiones de nombres entre una clase padre e hija. Para esto se utiliza el simbolo *guion bajo*. Python indica utilizar *un guion bajo* para señalar (a otros programadores) que el atributo o método es propio de la clase y no debe ser llamado directamente (sino utilizar getter y setter). Al utilizar  *dos guiones bajos* el mecanismo de name *mangling* modficia el nombre del atributo o método a la forma `name_class__name_atribute` para que no se sobreescriba el elemento si es definido en una clase hija.
+- **paradigma**: patrón o modelo a seguir para resolver determinado tipo de problema
 
-```python
-class Cuadrado:
+- **paradigmas de programación**: son estilos de programación diferenciados que por ende, generan distintas estructuras de código. Los paradigmas de programación se clasifican como: 
+  - **Paradigma de programación imperativo (paradigma de programación clásico)**: Su enfoque prevee realizar una secuencia regularizada de órdenes o instrucciones determinadas. El código resultante es muy fácil de entender. Los paradigmas de programación estructurada, procedimiental y modular estan subordinados al paradigma imperativo.
+  - **Paradigma de programación declarativo (paradigma de programación más reciente)**: Su enfoque radica en la descripción del resultado final buscado, por lo cual, lo principal es definir el *QUE* del resultado y no el *COMO* de los pasos que llevan a la solución (como es el caso del paradigma imperativo). Los paradigmas de programación funcional y lógica estan subordinados al paradigma declarativo.
 
-    def __init__(self, length):
-        self._side = length
-        self._area = length**2
-        self.__tipo = "figura geometrica"
+[explicación complementaria 1](https://medium.com/@Loopa/paradigmas-de-programaci%C3%B3n-programaci%C3%B3n-imperativa-y-programaci%C3%B3n-declarativa-4c4a4182fd87)
 
-    @property
-    def area(self):
-        return self._area
+[explicación complementaria 2](https://www.ionos.es/digitalguide/paginas-web/desarrollo-web/paradigmas-de-programacion/)
 
-    @property
-    def side(self):
-        return self._side
+# Conceptos del paradigma de programación orientado a objetos
 
-    @property
-    def tipo(self):
-        return self.__tipo
+- **abstracción**: proceso mental en el cual extraemos las características esenciales de algo, ignorando los detalles superfluos
+- **encapsulación**: proceso en el cual se oculta el estado de las características de una abstracción y se permite su modificación solo por operaciones definidas en la abstracción. 
 
-    @side.setter
-    def side(self, length):
-        self._side = length
-        self._reset_area()
+- **modularisación**: proceso de descomposición de un sistema en un conjunto de piezas cohesivas (con significado propio) y poco  acopladas (mínima interdependencia). 
+- **jerarquización**: proceso de ordenar en niveles (jerarquias) los elementos (modulos) de un sistema.
+  - **composición**: ocurre cuando un elemento (sistema) esta compuesto de otros (sistemas). Por ejemplo el sistema respiratorio esta compuestos de las fozas nasales, traquea y pulmones. Estos a su vez se compone de los albeolos, venas, etc. Este conepto explica la existencia de los conceptos de *clase* y *objeto*. 
+  - **clasificación**: ocurre cuando un elemento (sistema) es la especialización de otro. Por ejemplo los animales pueden ser vertabrados o invertebrados,  dentro de los vertebrados tenemos a los reptiles, insectos y mamíferos. Dentro de los mamíferos a los perros, vacas, etc. Este concepto explica la existencia del concepto de *herencia*.
 
-    def _reset_area(self):
-        self._area = self._side ** 2
+[explicación complementaria 1](https://desarrolloweb.com/manuales/teoria-programacion-orientada-objetos.html)
 
-miCuadrado = Cuadrado(10)
-print("el lado es:", miCuadrado._side) # se puede porque '_' solo es una buena práctica mencionada en la PEP8
-print("lado:", miCuadrado.side, "area:", miCuadrado.area) # forma correcta, utilizando getter
-miCuadrado.side = 20 # forma correcta, utilizando el setter
-print("lado actualizado: ", miCuadrado.side, "área actualizada: ", miCuadrado.area)
-
-print("el cuadrado es de tipo:" miCuadrado.__tipo) # arroja error - name mangling modifico el nombre de la propiedad
-print("el cuadrado es de tipo:", miCuadrado.tipo) # forma correcta, utilizando el getter
-print("el cuadrado es de tipo:", miCuadrado._Cuadrado__tipo) # forma incorrecta, utilizando el nuevo nombre producido por el name mangling
-```
-
-- [explicación complementaria 1](https://www.youtube.com/watch?v=ALZmCy2u0jQ)
-- [explicación complementaria 2](https://www.geeksforgeeks.org/name-mangling-in-python/)
-- [explicación complementaria 3](https://medium.com/analytics-vidhya/python-name-mangling-and-how-to-use-underscores-e67b529f744f)
-- [explicación complementaria 4](https://pythones.net/propiedades-en-python-oop/)
-
-**dunder o magic methods**: es como se denomina a los métodos que inician y terminan con dos guiones bajo y permiten sobrecargar (personalizar) el comportamiento del objeto.
-
-```python
-class Friend:
-
-    def __init__(self, name, age): # inicializa propiedades en las instancias de la clase
-        self.name = name
-        self.age = age
-
-    def __str__(self): # muetra un mensaje cuando imprimimos un objeto de la clase de forma directa
-        return f"{self.name} is {self.age} years old"
-
-primerfriend = Friend("Eduard", 99)
-print(primerfriend)
-```
-
-- [explicación complementaria 1](https://www.geeksforgeeks.org/dunder-magic-methods-python/)
-
+[explicación complementaria 2](https://www.youtube.com/watch?v=jQx8z1eNMXE)
