@@ -1,4 +1,4 @@
-## Particularidades de Python 
+# Particularidades de Python 
 
 **name mangling**: mecanismo de Python que ayuda a evitar las colisiones de nombres entre una clase padre e hija. Para esto se utiliza el simbolo *guion bajo*. Python indica utilizar *un guion bajo* para señalar (a otros programadores) que el atributo o método es propio de la clase y no debe ser llamado directamente (sino utilizar getter y setter). Al utilizar  *dos guiones bajos* el mecanismo de name *mangling* modficia el nombre del atributo o método a la forma `name_class__name_atribute` para que no se sobreescriba el elemento si es definido en una clase hija.
 
@@ -41,10 +41,13 @@ print("el cuadrado es de tipo:", miCuadrado.tipo) # forma correcta, utilizando e
 print("el cuadrado es de tipo:", miCuadrado._Cuadrado__tipo) # forma incorrecta, utilizando el nuevo nombre producido por el name mangling
 ```
 
-- [explicación complementaria 1](https://www.youtube.com/watch?v=ALZmCy2u0jQ)
-- [explicación complementaria 2](https://www.geeksforgeeks.org/name-mangling-in-python/)
-- [explicación complementaria 3](https://medium.com/analytics-vidhya/python-name-mangling-and-how-to-use-underscores-e67b529f744f)
-- [explicación complementaria 4](https://pythones.net/propiedades-en-python-oop/)
+[explicación complementaria 1](https://www.youtube.com/watch?v=ALZmCy2u0jQ)
+
+[explicación complementaria 2](https://www.geeksforgeeks.org/name-mangling-in-python/)
+
+[explicación complementaria 3](https://medium.com/analytics-vidhya/python-name-mangling-and-how-to-use-underscores-e67b529f744f)
+
+[explicación complementaria 4](https://pythones.net/propiedades-en-python-oop/)
 
 **dunder o magic methods**: es como se denomina a los métodos que inician y terminan con dos guiones bajo y permiten sobrecargar (personalizar) el comportamiento del objeto.
 

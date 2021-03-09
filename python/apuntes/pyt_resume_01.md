@@ -1,4 +1,4 @@
-# Detalles sobre las funciones
+# Detalles sobre funciones
 
 **funcion**: es una pieza de software reutilizable.
 - parametros: elementos definidos para introducir información en la función

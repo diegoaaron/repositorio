@@ -1,4 +1,4 @@
-## Sentencias de control de flujo
+# Sentencias de control de flujo
 
 **if - elif - else**: ejecuta un conjunto de instrucciones si se cumple la condicion.
 

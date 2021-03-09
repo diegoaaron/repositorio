@@ -1,4 +1,4 @@
-## Módulos y paquetes
+# Módulos y paquetes
 
 **modulo**: es un archivo con extensión *.py* que almacena código Python. Este archivo puede poser variables, constantes, condiciones, funciones, clases, métodos etc...
 
