@@ -1,6 +1,6 @@
-## Madlib
+# Madlib
 
-**resumen**: aplicación de consola que permite mostrar un texto aleatorio y modificable.
+**descripción**: aplicación de consola que muestra un texto aleatorio modificable.
 
 ### Puntos revisados
 
@@ -11,4 +11,3 @@
 ### Herramientas utilizadas
 
 - python 3.8
-

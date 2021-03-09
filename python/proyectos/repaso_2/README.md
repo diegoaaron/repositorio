@@ -1,6 +1,6 @@
-## Repaso
+# Repaso 2
 
-**resumen**: scripts de repaso de código Python
+**descripción**:: scripts de repaso de código Python
 
 ### Puntos revisados
 
@@ -9,5 +9,5 @@
 ### Herramientas utilizadas
 
 - python 3.8
-- [guía utilizada](https://www.freecodecamp.org/news/intermediate-python-course/)
+- [guía](https://www.freecodecamp.org/news/intermediate-python-course/)
 
