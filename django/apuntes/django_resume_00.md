@@ -53,7 +53,10 @@ pip install "Django~=3.0.0" # instala la versión más actual de la versión ind
 ### mostrar las sentencias sql a implementar con la migración
 `python manage.py sqlmigrate <app_name> <migration_name>` || example: `python manage.py sqlmigrate stores 0001` 
 
-### muestra el historico de migraciones (aplicadas o no) en el proyecto
+### valida si hay problemas en el proyecto relacionado a la migración a implementar
+`python manage.py check`
+
+### ejecuta las migraciones
 `python manage.py migrate <app_name> <migration_name>` || example: `python manage.py migrate stores 0001`
 
 `python manage.py migrate` || ejecuta todas las migraciones pendientes
