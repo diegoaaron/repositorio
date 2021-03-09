@@ -24,7 +24,6 @@
 - Elementos del paradigma de programación orientado a objetos (continuación) - [link](https://github.com/diegoaaron/repositorio/blob/main/python/apuntes/pyt_resume_102.md#elementos-del-paradigma-de-programaci%C3%B3n-orientado-a-objetos-continuaci%C3%B3n)
   - encapsulación, método|atributo estático, clase abstracta
 
-
 ## Plantillas
 
 - x
@@ -32,4 +31,3 @@
 ## Proyectos
 
 - x
-

@@ -31,8 +31,19 @@ print(mylist)
 mylist.insert(1, "blueberry") # agrega un elemento en la posición indicada
 print(mylist)
 
-item = mylist.pop() # remueve el último elemento de la lista y lo asigna a la variable
+item = mylist.pop() # remueve el último elemento de la lista, lo asigna a la variable y retorna la lista
 print(item)
 print(mylist)
 
-# se esta tabrando en pyt_resume_06
+mylist.remove("cherry") # remueve el elemento de la lsita
+print(mylist)
+
+mylist.clear() # elimina todos los elementos de la lista
+print(mylist)
+
+mylist = ["Banana","cherry", "apple"]
+mylist.reverse() # invierte el orden de los valores en la lista
+print(mylist)
+
+
+# se esta trabajando el resumen en  en pyt_resume_04
