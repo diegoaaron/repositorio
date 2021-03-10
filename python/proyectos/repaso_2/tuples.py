@@ -24,3 +24,8 @@ if "Max" in mytuple:
     print("yes")
 else:
     print("no")
+
+mytuple = ('a', 'p', 'p', 'l', 'e')
+print(mytuple.count('p'))
+
+print(mytuple.index('p'))
