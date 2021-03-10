@@ -96,4 +96,3 @@ b = [i*i for i in mylist]
 print(mylist)
 print(b)
 
-# se esta trabajando el resumen en  en pyt_resume_04
