@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from django.http import Http404, HttpResponse, HttpResponseRedirect
+from django.http import HttpResponseRedirect
 from django.urls import reverse
 
 from .models import Question, Choice
@@ -11,13 +11,12 @@ def index(request):
 
     return render(request, 'polls/index.html', context)
 
+
 def detail(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
 
     return render(request, 'polls/detail.html', {'question': question})
 
-def results(request, question_id):
-    return HttpResponse("You're looking at the results of question %s" % question_id)
 
 def vote(request, question_id):
     question = get_object_or_404(Question, id=question_id)
@@ -33,3 +32,9 @@ def vote(request, question_id):
         selected_choice.save()
 
     return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
+
+
+def results(request, question_id):
+    question = get_object_or_404(Question, id=question_id)
+    
+    return render(request, 'polls/results.html', {'question': question})
