@@ -1,4 +1,4 @@
-# Conceptos de Django y Rest
+# Conceptos de Django y Django Rest
 
 ### Pasos de solución con Django
 Modelo > Formulario > Vista > Ruta > Plantilla
