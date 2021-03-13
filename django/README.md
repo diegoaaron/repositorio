@@ -2,7 +2,7 @@
 
 - Comandos de referencia - [link](https://github.com/diegoaaron/repositorio/blob/main/django/apuntes/django_resume_00.md#comandos-de-referencia)
   - Administración del entorno de trabajo, Manejo del modelo
-- Conceptos de Django y Django Rest  - [link](https://github.com/diegoaaron/repositorio/blob/main/django/apuntes/django_resume_01.md#conceptos-de-django-y-rest)
+- Conceptos de Django y Django Rest  - [link](https://github.com/diegoaaron/repositorio/blob/main/django/apuntes/django_resume_01.md#conceptos-de-django-y-django-rest)
   - Pasos de solución con Django, Pasos de solución con Django Rest
 - Glosario - [link](https://github.com/diegoaaron/repositorio/blob/main/django/apuntes/django_resume_02.md#glosario)
   - QuerySet
