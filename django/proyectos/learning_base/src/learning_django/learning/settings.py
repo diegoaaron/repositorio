@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'courses.apps.CoursesConfig',
 ]
 
 MIDDLEWARE = [
@@ -123,6 +124,6 @@ STATIC_URL = '/static/'
 # REST FRAMEWORK CONFIG
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.jangoModelPermissionsOrAnonReadOnly'
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
     ]
 }
