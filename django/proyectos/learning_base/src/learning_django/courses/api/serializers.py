@@ -12,7 +12,7 @@ class SubjectSerializer(serializers.ModelSerializer): # los serializers se compo
         fields = ['id', 'title', 'slug']
 
 
-class CourseSerializer(serializers.ModelSerializer): # 
+class CourseSerializer(serializers.ModelSerializer): 
     modules = ModuleSerializer(many=True, read_only=True)
     class Meta:
         model = Course
