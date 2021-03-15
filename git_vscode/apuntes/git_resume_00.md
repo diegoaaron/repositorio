@@ -41,7 +41,7 @@
 
 ## Artículos y guías
 
-[Configuración de SSH](https://docs.github.com/es/github/authenticating-to-github/connecting-to-github-with-ssh)
+[Configuración SSH](https://docs.github.com/es/github/authenticating-to-github/connecting-to-github-with-ssh)
 
 [Configuración de comandos básicos de github](https://docs.github.com/es/free-pro-team@latest/github/creating-cloning-and-archiving-repositories)
 
