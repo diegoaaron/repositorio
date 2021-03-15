@@ -45,6 +45,4 @@
 
 [Configuración de comandos básicos de github](https://docs.github.com/es/free-pro-team@latest/github/creating-cloning-and-archiving-repositories)
 
-[Referencias sobre Markdown](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax) 
-
 [Deshacer último commit](https://midu.dev/como-deshacer-el-ultimo-commit-git/)
