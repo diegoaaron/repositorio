@@ -13,5 +13,5 @@
 ### DJANGO
 
 #### patrón - evita la carpeta 'env' en el directorio actual o sub directorios.
-`**/env`
+`**/env/*`
 

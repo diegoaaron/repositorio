@@ -1,8 +1,8 @@
 # vscode de configuración local
-**/.vscode
+**/.vscode/*
 
 # python
-**/__pycache__
+**/__pycache__/*
 
 ## entornos virtuales django
-**/env
+**/env/*
