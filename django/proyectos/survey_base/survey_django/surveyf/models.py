@@ -8,3 +8,7 @@ class Survey(models.Model):
     active = models.BooleanField(default=True)
     created = models.DateTimeField(auto_now_add=True, auto_now=False)
     updated = models.DateTimeField(auto_now_add=False, auto_now=True)
+
+    def __str__(self):
+        
+        return f'{self.owner} - {self.title}'

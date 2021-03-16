@@ -18,7 +18,7 @@ def survey_list(request):
         return Response(serializer.data)
 
     elif request.method == 'POST':
-        serializer = SurveySerializer(data=request.DATA)
+        serializer = SurveySerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
 
