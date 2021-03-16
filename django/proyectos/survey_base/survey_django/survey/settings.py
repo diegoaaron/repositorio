@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'api.apps.ApiConfig',
-    'surveyf.apps.ApiConfig',
+    'surveyf.apps.SurveyfConfig',
 ]
 
 MIDDLEWARE = [
