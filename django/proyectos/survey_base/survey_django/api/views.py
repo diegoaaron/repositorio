@@ -44,7 +44,7 @@ def survey_details(request, pk):
         return Response(serializer.data)
 
     if request.method == 'PUT':
-        serializer = SurveySerializer(survey, data=request.DATA)
+        serializer = SurveySerializer(survey, data=request.data)
 
         if serializer.is_valid():
             serializer.save()
