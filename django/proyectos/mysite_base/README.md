@@ -1,4 +1,4 @@
-# Sitetest
+# Mysite
 
 **descripción**: prueba de Django utilizando la documentación básica
 

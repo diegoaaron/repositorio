@@ -1,6 +1,6 @@
-# Learning
+# Bymecoffe
 
-**descripción**: creando un API REST para cursos
+**descripción**: creando un API parecido a bymecoffe
 
 ### Puntos revisados
 
