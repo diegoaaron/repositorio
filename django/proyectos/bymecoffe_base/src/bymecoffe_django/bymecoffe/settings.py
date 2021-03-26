@@ -134,3 +134,7 @@ LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_URL = 'logout'
 LOGOUT_REDIRECT_URL = 'login'
+
+
+SOCIAL_AUTH_FACEBOOK_KEY = 000000        # App ID
+SOCIAL_AUTH_FACEBOOK_SECRET = 'xxxxx'  # App Secret
