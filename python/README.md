@@ -7,7 +7,7 @@
 - Módulos y paquetes - [link](https://github.com/diegoaaron/repositorio/blob/main/python/apuntes/pyt_resume_03.md#m%C3%B3dulos-y-paquetes)
   - módulo, paquete, \_\_name\_\_ == "\_\_main\_\_"
 - Tipos de datos - [link](https://github.com/diegoaaron/repositorio/blob/main/python/apuntes/pyt_resume_04.md#tipos-de-datos)
-  - listas
+  - listas, tuplas
 - Particularidades de Python - [link](https://github.com/diegoaaron/repositorio/blob/main/python/apuntes/pyt_resume_05.md#particularidades-de-python)
   - name mangling, dunder o magic methods
 - Herramientas de consola - [link](https://github.com/diegoaaron/repositorio/blob/main/python/apuntes/pyt_resume_06.md#herramientas-de-consola)

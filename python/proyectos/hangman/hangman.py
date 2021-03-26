@@ -1,46 +1,46 @@
 def hangman(word):
-    wrong = 0
 
-    stages = ["",
-             "_________       ",
-             "|        |      ",
-             "|        0      ",
-             "|       /|\     ",
-             "|       / \     ",
-             "|               ",
-             "|_______________"]
+    stages = ["_________       ",
+              "|        |      ",
+              "|        0      ",
+              "|       /|\     ",
+              "|       / \     ",
+              "|               ",
+              "|_______________"]
     
+    wrong = 0
     rletters = list(word)
     board = ['_'] * len(word)
     win = False
 
     print('Bienbenido al juego de ahorcado!')
-    print('Tendras 8 intentos para adivinar las palabras')
+    print('Tendras 7 intentos para adivinar las palabras')
 
-    while wrong < len(stages) - 1:
+    while wrong < len(stages):
         print("\n")
-        msg = 'Adivina una letra'
-        char = input(msg)
+        char = input('Adivina una letra: ')
 
-        if char in rletters:
-            cind = rletters.index(char)
-            board[cind] = char
-            rletters[cind] = '$'
+        for palabra in  rletters:
+            if palabra == char:
+                indice = rletters.index(char)
+                board[indice] = char
+                rletters[indice] = '*'
+
+            else:
+                wrong += 1
         
-        else:
-            wrong += 1
-        print((" ".join(board)))
-        e = wrong + 1
-        print("\n".join(stages[0:e]))
+        print("palabra formada: ",(" ".join(board)))
+        print("errores: ", wrong)
 
-        if "__" not in board:
-            print("You win!")
+        #e = wrong + 1
+        print("\n".join(stages[0:wrong]))
+
+        if "_" not in board:
+            print("You win! Palabra formada completamente")
             print(" ".join(board))
             win = True
             break
 
     if not win:
-        print("\n".join(stages[0: wrong]))
-        print(f"You lose! It was {word}")
+        print(f"Perdiste! La palabra correcta es: {word}")
 
-hangman("cat")
