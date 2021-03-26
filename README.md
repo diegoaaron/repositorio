@@ -1,7 +1,5 @@
-# repositorio
+# Repositorio
 
 ## Django
 
 ## Python
-
-## Linux
