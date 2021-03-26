@@ -5,8 +5,9 @@
 ### Puntos revisados
 
 - módulo random
-- variables, if, elif, while
-- f-strings, input, break
+- variables, if, elif, while, for
+- f-strings, input, break, escape de caracteres
+- listas
 
 ### Herramientas utilizadas
 

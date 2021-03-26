@@ -34,7 +34,6 @@ def hangman(word):
         print("palabra formada: ",(" ".join(board)))
         print("errores: ", wrong)
 
-        #e = wrong + 1
         print("\n".join(stages[0:wrong]))
 
         if "_" not in board:
