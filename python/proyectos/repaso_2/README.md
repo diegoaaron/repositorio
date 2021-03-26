@@ -1,10 +1,12 @@
 # Repaso 2
 
-**descripción**: scripts de repaso de código Python
+**descripción**: scripts de repaso
 
 ### Puntos revisados
 
-- listas
+- listas []
+- tuplas ()
+- sets {} 
 
 ### Herramientas utilizadas
 
