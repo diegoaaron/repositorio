@@ -4,7 +4,8 @@
 
 ### Puntos revisados
 
-- x
+- if, else, while, input
+- módulo random
 
 ### Herramientas utilizadas
 
