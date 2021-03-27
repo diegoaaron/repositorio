@@ -14,6 +14,7 @@ $~/Documentos/projectos_django/myproject_base/
         │   │   └── magazine/
         │   │       └── migrations/
         │   ├── settings.py
+        │   ├── urls.py
         │   ├── site_static/ #por validar
         │   │   └── site/
         │   │       ├── css/
