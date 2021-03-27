@@ -4,14 +4,16 @@
   - parametros, argumentos, return, *args y *kwargs, docstring
 - Sentencias de control de flujo - [link](https://github.com/diegoaaron/repositorio/blob/main/python/apuntes/pyt_resume_02.md#sentencias-de-control-de-flujo)
   - if, elif, else, while, for, break y continue
-- Módulos y paquetes - [link](https://github.com/diegoaaron/repositorio/blob/main/python/apuntes/pyt_resume_03.md#m%C3%B3dulos-y-paquetes)
-  - módulo, paquete, \_\_name\_\_ == "\_\_main\_\_"
 - Tipos de datos - [link](https://github.com/diegoaaron/repositorio/blob/main/python/apuntes/pyt_resume_04.md#tipos-de-datos)
   - listas, tuplas
-- Particularidades de Python - [link](https://github.com/diegoaaron/repositorio/blob/main/python/apuntes/pyt_resume_05.md#particularidades-de-python)
-  - name mangling, dunder o magic methods
+- Explicación sobre las clases - [link](#)
+  - clase, métodos, dunder o magic methods
+- Módulos y paquetes - [link](https://github.com/diegoaaron/repositorio/blob/main/python/apuntes/pyt_resume_03.md#m%C3%B3dulos-y-paquetes)
+  - módulo, paquete, \_\_name\_\_ == "\_\_main\_\_"
 - Herramientas de consola - [link](https://github.com/diegoaaron/repositorio/blob/main/python/apuntes/pyt_resume_06.md#herramientas-de-consola)
   - f-strings, input(), escape de caracteres, dir()
+- Particularidades de Python - [link](https://github.com/diegoaaron/repositorio/blob/main/python/apuntes/pyt_resume_05.md#particularidades-de-python)
+  - name mangling, dunder o magic methods
 
 ## Apuntes complementarios
 

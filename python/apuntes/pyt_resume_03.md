@@ -55,7 +55,6 @@ if __name__ == "__main__":
 # si ejecutamos este módulo con python mi_modulo.py, la función se ejecutara
 ```
 
-[explicación complementaria 1](https://es.stackoverflow.com/questions/32165/qu%C3%A9-es-if-name-main)
-
-[explicación complementaria 2](https://alvarohurtado.es/2020/11/16/que-hace-if-__name__-__main__-en-python/)
+- [explicación complementaria 1](https://es.stackoverflow.com/questions/32165/qu%C3%A9-es-if-name-main)
+- [explicación complementaria 2](https://alvarohurtado.es/2020/11/16/que-hace-if-__name__-__main__-en-python/)
 
