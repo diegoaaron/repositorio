@@ -1,4 +1,4 @@
-## Apuntes de Linux
+## Apuntes sobre linux
 
 - x
 

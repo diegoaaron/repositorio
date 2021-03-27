@@ -1,4 +1,4 @@
-## Apuntes sobre GIT - GITHUB - VSCODE
+## Apuntes sobre git vscode
 
 - x
 

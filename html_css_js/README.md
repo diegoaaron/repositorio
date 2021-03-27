@@ -1,4 +1,4 @@
-## Apuntes sobre HTML - CSS - JS
+## Apuntes sobre html css js
 
 - x
 
