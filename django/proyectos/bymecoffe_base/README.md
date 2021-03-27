@@ -1,10 +1,10 @@
 # Bymecoffe
 
-**descripción**: creando una web parecido a bymecoffe
+**descripción**: proyecto que muestra autenticación con fb
 
 ### Puntos revisados
 
-- app
+- x
 - 
 
 ### Herramientas utilizadas

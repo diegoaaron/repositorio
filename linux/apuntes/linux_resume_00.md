@@ -24,7 +24,7 @@ copiar archivos del servidor al equipo `scp -i "servidor_testing.pem" ubuntu@aws
 copiar archivos del equipo al servidor `scp -i "servidor_testing.pem" ~/Documentos/django/backups/main.tar.gz ubuntu@aws.com:/home/django/`
 
 
-**journalctl**: herramienta para consultar al demonio journal(logs sytemd)
+**journalctl**: herramienta para consultar al demonio journal (logs sytemd)
 
 mostrar los logs del último inicio `journalctl -b`
 
