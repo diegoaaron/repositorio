@@ -28,10 +28,10 @@ pip install djangorestframework
 `django-admin.py startproject myproject`
 
 ### instalar paquetes desde un archivo
-`pip install -r requirements/dev.txt`
+`pip install -r requirements.txt`
 
 ### crear lista de paquetes utilizados en el proyecto
-`pip freeze > requirements/dev.txt`
+`pip freeze > requirements.txt`
 
 ### crear una app 
 `python manage.py startapp firstApp`
@@ -47,7 +47,7 @@ pip install djangorestframework
 ### interactuar por consola con Django
 `python manage.py shell`
 
-## Manejo del modelo
+## Manipulación del modelo
 
 ### generar la estructura de migración para un modelo
 `python manage.py makemigrations`

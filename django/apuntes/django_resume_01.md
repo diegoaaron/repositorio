@@ -4,5 +4,5 @@
 Modelo > Formulario > Vista > Ruta > Plantilla
 
 ### Pasos de solución con Django Rest 
-Modelo > Serialización > Vista > Ruta - Router 
+Modelo > Serialización > Vista > Ruta - Router > Plantilla
 
