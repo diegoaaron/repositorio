@@ -16,9 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+from django.views.generic.base import RedirectView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('auth/', include('bymecoffe.apps.core.urls', namespace='auth')),
+    path('core/', include('bymecoffe.apps.core.urls', namespace='core')),
+    path('', RedirectView.as_view(url='core/'), name='index'),
 ]
 
