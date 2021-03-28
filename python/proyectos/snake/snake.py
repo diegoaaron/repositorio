@@ -20,7 +20,7 @@ pygame.display.set_caption('Gusanito, por Diego')
 clock = pygame.time.Clock()
 
 snake_block = 10
-snake_speed = 15
+snake_speed = 10
 
 font_style = pygame.font.SysFont("bahnschrift", 25)
 score_font = pygame.font.SysFont("comicsansms", 35)
@@ -70,7 +70,7 @@ def gameLoop():
                         gameLoop()
 
         for event in pygame.event.get():
-            print(event)
+            
             if event.type == pygame.QUIT:
                 game_over = True
 
@@ -90,21 +90,26 @@ def gameLoop():
                 elif event.key == pygame.K_DOWN:
                     y1_change = snake_block
                     x1_change = 0
-
+        
+        
         if x1 >= dis_width or x1 < 0 or y1 >= dis_height or y1 < 0: # salir del mapa
             game_over = True
-            
+          
         x1 += x1_change
         y1 += y1_change
-        dis.fill(blue)
+        dis.fill(blue) # define el fondo en azul
 
-        print((foodx, foody))
-        pygame.draw.rect(dis, green, [foodx, foody, snake_block, snake_block])
+        pygame.draw.rect(dis, green, [foodx, foody, snake_block, snake_block]) # dibuja un rectangulo verde de 10 x 10 en la posicion foodx, foody
+        
         snake_Head = []
         snake_Head.append(x1)
         snake_Head.append(y1)
+        
+        print(snake_Head, snake_List, len(snake_List))
+        
         snake_List.append(snake_Head)
-        if len(snake_List) > Length_of_snake:
+
+        if len(snake_List) > Length_of_snake: # ¿Porque si el tamaño de lista es mas grande que los puntos atrapados se elimina el primer elemento de la lista
             del snake_List[0]
 
         for x in snake_List[:-1]:

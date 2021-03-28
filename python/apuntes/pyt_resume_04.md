@@ -1,6 +1,6 @@
 # Tipos de datos
 
-**listas**: tipo de dato que se puede ordenar, es mutable y permite elementos duplicados.
+**listas**: tipo de dato que se puede ordenar, es mutable y soporta elementos duplicados.
 
 ```python
 mylist = ["banana","cherry", "apple"]
@@ -19,8 +19,12 @@ mylist.append("lemon") # agrega el elemento al final
 print(mylist)
 
 
-item = mylist.pop() # remueve el último elemento de la lista, lo asigna a la variable y retorna la lista
-print(item)
+item = mylist.pop() # elimina el último elemento de la lista, lo asigna a la variable y retorna la lista
+print(item, mylist)
+
+
+mylist = ["la","le", "li", "lo", "lu"]
+del mylist[2] # elimina el elemento de la posición 2
 print(mylist)
 
 
@@ -36,27 +40,36 @@ print(mylist)
 
 list_org = ["banana", "cherry", "apple"]
 
-list_cpy = list_org # forma erronea de copiar una lista
-list_cpy2 = list_org.copy() # primera opción para copiar una lista
-list_cpy3 = list(list_org) # segunda opción para copiar una lista
-list_cpy4 = list_org[:] # tercera opción para copiar una lista
+list_cop = list_org # forma erronea de copiar una lista
+list_cop.append("lemon")
+print(list_org, list_cop) 
 
-list_cpy.append("lemon")
-list_cpy2.append("tuna")
-list_cpy3.append("piña")
-list_cpy4.append("azucar")
+list_cop2 = list_org.copy() # primera opción para copiar una lista
+list_cop2.append("tuna")
+print(list_org, list_cop2)
 
-print(list_org)
-print(list_cpy)
-print(list_cpy2)
-print(list_cpy3)
-print(list_cpy4)
+list_cop3 = list(list_org) # segunda opción para copiar una lista
+list_cop3.append("piña")
+print(list_org, list_cop3)
+
+list_cop4 = list_org[:] # tercera opción para copiar una lista
+list_cop4.append("azucar")
+print(list_org, list_cop4)
 
 
 mylist = [1, 2, 3, 4, 5, 6]
-b = [i*i for i in mylist] # creando lista a partir de otra
-print(mylist)
-print(b)
+new_list = [i*i for i in mylist] # creando lista a partir de otra
+print(mylist, new_list)
+
+
+mylist = ["la","le", "li", "lo", "lu"]
+print(mylist[:]) # ["la","le", "li", "lo", "lu"]
+print(mylist[:2]) # ['la', 'le']
+print(mylist[2:]) # ['li', 'lo', 'lu']
+print(mylist[1:3]) # ['le', 'li']
+print(mylist[:-1]) # ['la', 'le', 'li', 'lo']
+print(mylist[-1:]) # ['lu']
+
 
 ```
 
