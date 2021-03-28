@@ -3,7 +3,6 @@
 **descripción**: programa que simula el juego de gusanito. 
 
 > Pierdes si golpeas tu cola, tiene un panel de administración
-> continuar en "Displaying the Score"
 
 ### Puntos revisados
 

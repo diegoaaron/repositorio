@@ -3,19 +3,19 @@
 **listas**: tipo de dato que se puede ordenar, es mutable y permite elementos duplicados.
 
 ```python
-mylist = ["Banana","cherry", "apple"]
+mylist = ["banana","cherry", "apple"]
 
-for i in mylist: # recorre una lista
+for i in mylist: # recorre la lista
     print(i)
 
 
-if "Banana" in mylist: # valida elemento en la lista
+if "Banana" in mylist: # valida si el elemento se encuentra
     print("yes")
 else:
     print("no")
 
 
-mylist.append("lemon") # agrega un elemento a la lista
+mylist.append("lemon") # agrega el elemento al final
 print(mylist)
 
 
