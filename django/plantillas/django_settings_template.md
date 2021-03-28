@@ -21,8 +21,8 @@ from django.views.generic.base import RedirectView
 
 urlpatterns = [
     ...
-    path('auth/', include('bymecoffe.apps.core.urls', namespace='auth')), # agregar rutas de app interna
-    path('', RedirectView.as_view(url='core/'), name='index'), # agregar redirección por defecto a una app interna
+    path('auth/', include('bymecoffe.apps.core.urls', namespace='auth')), # agrega rutas de app interna
+    path('', RedirectView.as_view(url='core/'), name='index'), # agrega redirección por defecto a una app interna
 ]
 
 ```
