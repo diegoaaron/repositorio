@@ -1,8 +1,25 @@
-## Configuraciones generales del settings de un proyecto
+# Configuraciones de archivos
+
+## settings.py
 
 ```python
 
-TIME_ZONE = 'America/Lima'  # linea 108 - zona horaria del proyecto
+INSTALLED_APPS = [
+    ...
+    'bymecoffe.apps.core', # agregar app interna
+]
 
+TIME_ZONE = 'America/Lima'  # zona horaria del proyecto
+
+```
+
+## urls.py 
+
+```python
+
+urlpatterns = [
+    ...
+    path('auth/', include('bymecoffe.apps.core.urls', namespace='auth')), # agregar rutas de app interna
+]
 
 ```
