@@ -31,7 +31,7 @@ def Your_score(score):
 
 def our_snake(snake_block, snake_list): # dibuja el gusano
     for x in snake_list:
-        pygame.draw.rect(dis, black, [x[0], x[1], snake_block, snake_block])
+        pygame.draw.rect(dis, black, [x[0], x[1], snake_block, snake_block]) # Rect(left, top, width, height) -> Rect
 
 def message(msg, color):
     mesg = font_style.render(msg, True, color)
@@ -118,7 +118,6 @@ def gameLoop():
 
         our_snake(snake_block, snake_List)
         Your_score(Length_of_snake - 1)
-
         pygame.display.update()
 
         if x1 == foodx and y1 == foody:
