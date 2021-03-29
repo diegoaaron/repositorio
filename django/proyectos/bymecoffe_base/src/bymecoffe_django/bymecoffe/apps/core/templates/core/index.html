@@ -5,6 +5,8 @@
 {% block content %}
 <section class="d-flex flex-column">
     <h4 class="text-white text-center"> INICIO </h4>
-    <button type="button" class="btn btn-primary"> ir a autenticarme </button>
+    <button type="button" class="btn btn-primary">
+        <a href="{% url 'core:login' %}">ir a autenticarme</a>
+    </button>
 </section>
 {% endblock %}

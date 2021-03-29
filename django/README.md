@@ -15,6 +15,8 @@
 - Estructura genérica de un proyecto Django - [link](https://github.com/diegoaaron/repositorio/blob/main/django/plantillas/django_project_template.md#estructura-gen%C3%A9rica-de-un-proyecto-django)
 - Configuraciones de archivos Django - [link](https://github.com/diegoaaron/repositorio/blob/main/django/plantillas/django_settings_template.md#configuraciones-de-archivos)
   - settings.py, urls.py
+- Elementos de plantillas - [link]([#](https://github.com/diegoaaron/repositorio/blob/main/django/plantillas/django_elements_template.md#elementos-de-plantillas))
+  - button
 
 ## Proyectos
 
