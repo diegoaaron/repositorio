@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'bymecoffe.apps.core',
+    'bymecoffe.apps.core', # app core
+    'social_django', # app social-auth-app-django
 ]
 
 MIDDLEWARE = [
@@ -120,14 +121,15 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-# Backends de autenticación
 
-AUTHENTICATION_BACKENDS = [
-    'social_core.backends.linkedin.LinkedinOAuth2',
-    'social_core.backends.instagram.InstagramOAuth2',
-    'social_core.backends.facebook.FacebookOAuth2',
+# Backends Authentication
+
+AUTHENTICATION_BACKENDS = (
+    'social_core.backends.twitter.TwitterOAuth',
+    'social_core.backends.facebook.FacebookOAuth2', # del tutorial
     'django.contrib.auth.backends.ModelBackend',
-]
+)
+
 
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'home'
