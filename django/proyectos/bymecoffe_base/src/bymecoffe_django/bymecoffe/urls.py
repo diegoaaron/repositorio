@@ -21,6 +21,7 @@ from django.views.generic.base import RedirectView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('core/', include('bymecoffe.apps.core.urls', namespace='core')),
+    path('social-auth/', include('social_django.urls', namespace='social')),
     path('', RedirectView.as_view(url='core/'), name='index'),
 ]
 
