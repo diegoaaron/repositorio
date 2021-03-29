@@ -3,6 +3,7 @@
 **descripción**: programa que simula el juego de gusanito. 
 
 > Pierdes si golpeas tu cola, tiene un panel de administración
+> un borde superior para el score y tiempo, en los bordes áreas que funcionen como muros con aberturas para que la serpiente pueda pasar
 
 ### Puntos revisados
 
