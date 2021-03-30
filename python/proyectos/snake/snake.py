@@ -20,7 +20,7 @@ pygame.display.set_caption('Gusanito, por Diego') # define un título al lienzo
 clock = pygame.time.Clock() # objeto que soporta el control del tiempo y fotogramas del juego
 
 snake_block = 10
-snake_speed = 10
+snake_speed = 5
 
 font_style = pygame.font.SysFont("bahnschrift", 25) # objeto que brinda una fuente
 score_font = pygame.font.SysFont("comicsansms", 35) # objeto que brinda una fuente
@@ -31,8 +31,8 @@ def Your_score(score): # funcion para mostrar el puntuja
 
 def our_snake(snake_block, snake_list): # dibuja el gusano
     for x in snake_list:
-        print(x, "eeeeeeeeeee", x[0], x[1])
         pygame.draw.rect(dis, black, [x[0], x[1], snake_block, snake_block]) # Rect(left, top, width, height) -> Rect - dibuja el gusano
+    print("snake_list:",snake_list)
 
 def message(msg, color): # imprime un mensaje generico
     mesg = font_style.render(msg, True, color)
@@ -51,8 +51,8 @@ def gameLoop():
     snake_List = []
     Length_of_snake = 1
 
-    foodx = round(random.randrange(0, 790)) # posicion x - comida
-    foody = round(random.randrange(0, 390)) # posición y - comida
+    foodx = round(random.randrange(0, 790, 10)) # posicion x - comida
+    foody = round(random.randrange(0, 390, 10)) # posición y - comida
 
     while not game_over:
 
@@ -107,22 +107,28 @@ def gameLoop():
         snake_Head.append(y1) # agrega la posición a la lista
         
         
-        snake_List.append(snake_Head) # agrega 
+        snake_List.append(snake_Head) # agrega la lista de la nueva posición a otra lista
 
-        if len(snake_List) > Length_of_snake: # ¿Porque si el tamaño de lista es mas grande que los puntos atrapados se elimina el primer elemento de la lista
+        
+        print(len(snake_List), "len,snake_List", snake_List)
+        if len(snake_List) > Length_of_snake: # ?
             del snake_List[0]
-
-        for x in snake_List[:-1]:
+        
+        '''
+        for x in snake_List[:-1]: # evalua si una parte de la serpiente se golpea consigo mismo
             if x == snake_Head:
                 game_close = True
+        '''
 
         our_snake(snake_block, snake_List)
         Your_score(Length_of_snake - 1)
         pygame.display.update()
 
+        print("x1: ", x1, "y1: ", y1, "foodx, foody", foodx, foody)
         if x1 == foodx and y1 == foody:
-            foodx = round(random.randrange(0, 790))
-            foody = round(random.randrange(0, 390))
+            print("gaaneeeeeeeeeeeee")
+            foodx = round(random.randrange(0, 790, 10))
+            foody = round(random.randrange(0, 390, 10))
             Length_of_snake += 1
 
         clock.tick(snake_speed)
