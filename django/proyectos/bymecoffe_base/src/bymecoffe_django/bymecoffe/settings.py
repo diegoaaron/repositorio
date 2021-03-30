@@ -25,7 +25,7 @@ SECRET_KEY = '=jh@xx=0(56v-!d#5fi9qzn_wwj92de=q6-9&#g0*j2c7@ua3v'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['myapp.com',]
 
 
 # Application definition
@@ -64,6 +64,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
             ],
         },
     },
@@ -137,5 +139,5 @@ LOGOUT_URL = 'logout'
 LOGOUT_REDIRECT_URL = 'login'
 
 
-SOCIAL_AUTH_FACEBOOK_KEY = 44        # App ID
-SOCIAL_AUTH_FACEBOOK_SECRET = 'X'  # App Secret
+SOCIAL_AUTH_FACEBOOK_KEY = ''        # App ID
+SOCIAL_AUTH_FACEBOOK_SECRET = ''  # App Secret
