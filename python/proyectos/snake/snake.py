@@ -26,14 +26,15 @@ font_style = pygame.font.SysFont("bahnschrift", 25) # objeto que brinda una fuen
 score_font = pygame.font.SysFont("comicsansms", 35) # objeto que brinda una fuente
 
 def Your_score(score): # funcion para mostrar el puntuja
-    value = score_font.render(f"Your Score: {score}", True, yellow)
-    dis.blit(value, [0, 0])
+    value = score_font.render(f"Your Score: {score}", True, yellow) # crea un mensaje de alerta
+    dis.blit(value, [0, 0]) # dibuja un lienzo sobre otro
 
 def our_snake(snake_block, snake_list): # dibuja el gusano
     for x in snake_list:
-        pygame.draw.rect(dis, black, [x[0], x[1], snake_block, snake_block]) # Rect(left, top, width, height) -> Rect
+        print(x, "eeeeeeeeeee", x[0], x[1])
+        pygame.draw.rect(dis, black, [x[0], x[1], snake_block, snake_block]) # Rect(left, top, width, height) -> Rect - dibuja el gusano
 
-def message(msg, color):
+def message(msg, color): # imprime un mensaje generico
     mesg = font_style.render(msg, True, color)
     dis.blit(mesg, [dis_width / 6, dis_height / 3])
 
@@ -105,7 +106,7 @@ def gameLoop():
         snake_Head.append(x1)
         snake_Head.append(y1)
         
-        print(snake_Head, snake_List, len(snake_List))
+        #print(snake_Head, snake_List, len(snake_List))
         
         snake_List.append(snake_Head)
 
