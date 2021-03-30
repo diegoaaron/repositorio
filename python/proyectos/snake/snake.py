@@ -51,15 +51,15 @@ def gameLoop():
     snake_List = []
     Length_of_snake = 1
 
-    foodx = round(random.randrange(0, 790))
-    foody = round(random.randrange(0, 390))
+    foodx = round(random.randrange(0, 790)) # posicion x - comida
+    foody = round(random.randrange(0, 390)) # posición y - comida
 
     while not game_over:
 
-        while game_close == True:
-            dis.fill(blue)
-            message('Perdiste, Q (Salir) o C (Nuevo juego)', red)
-            Your_score(Length_of_snake - 1)
+        while game_close == True: # evalua mientras pierde
+            dis.fill(blue) # pinta de color azul el lienzo
+            message('Perdiste, Q (Salir) o C (Nuevo juego)', red) # llamamos al mensaje
+            Your_score(Length_of_snake - 1) # 
             pygame.display.update()
 
             for event in pygame.event.get():
