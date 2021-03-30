@@ -138,11 +138,6 @@ gameLoop()
 
 '''
 
-que código define la serpiente y su movimiento
-
-que código define comida y aparición de la serpiente
-
-que código define el acto de comer y crecer para la serpiente
 
 
 '''
