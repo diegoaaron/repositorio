@@ -45,8 +45,8 @@ def gameLoop():
     x1 = dis_width / 2
     y1 = dis_height / 2
 
-    x1_change = 0
-    y1_change = 0
+    x1_change = 0 # recoje el espacio a moverse en el eje 'x' proveniente de las teclas
+    y1_change = 0 # recoje el espacio a moverse en el eje 'y' proveniente de las teclas
 
     snake_List = []
     Length_of_snake = 1
@@ -59,10 +59,10 @@ def gameLoop():
         while game_close == True: # evalua mientras pierde
             dis.fill(blue) # pinta de color azul el lienzo
             message('Perdiste, Q (Salir) o C (Nuevo juego)', red) # llamamos al mensaje
-            Your_score(Length_of_snake - 1) # 
-            pygame.display.update()
+            Your_score(Length_of_snake - 1) # muestra el score
+            pygame.display.update() # actualiza todo el lienzo
 
-            for event in pygame.event.get():
+            for event in pygame.event.get(): # sensa las teclas 'q' y 'c'
                 if event.type == pygame.KEYDOWN:
                     if event.key == pygame.K_q:
                         game_over = True
@@ -70,7 +70,7 @@ def gameLoop():
                     if event.key == pygame.K_c:
                         gameLoop()
 
-        for event in pygame.event.get():
+        for event in pygame.event.get(): #  sensa el movimiento de las teclas
             
             if event.type == pygame.QUIT:
                 game_over = True
@@ -85,30 +85,29 @@ def gameLoop():
                     y1_change = 0
 
                 elif event.key == pygame.K_UP:
-                    y1_change = -snake_block
                     x1_change = 0
+                    y1_change = -snake_block
 
                 elif event.key == pygame.K_DOWN:
-                    y1_change = snake_block
                     x1_change = 0
+                    y1_change = snake_block
         
         
         if x1 >= dis_width or x1 < 0 or y1 >= dis_height or y1 < 0: # salir del mapa
             game_over = True
           
-        x1 += x1_change
-        y1 += y1_change
-        dis.fill(blue) # define el fondo en azul
+        x1 += x1_change # recoje la posición x a moverse
+        y1 += y1_change # recoje la posición y a moverse
+        dis.fill(blue) # pinta de color azul el lienzo
 
         pygame.draw.rect(dis, green, [foodx, foody, snake_block, snake_block]) # dibuja un rectangulo verde de 10 x 10 en la posicion foodx, foody
         
-        snake_Head = []
-        snake_Head.append(x1)
-        snake_Head.append(y1)
+        snake_Head = [] 
+        snake_Head.append(x1) # agrega la posición a la lista
+        snake_Head.append(y1) # agrega la posición a la lista
         
-        #print(snake_Head, snake_List, len(snake_List))
         
-        snake_List.append(snake_Head)
+        snake_List.append(snake_Head) # agrega 
 
         if len(snake_List) > Length_of_snake: # ¿Porque si el tamaño de lista es mas grande que los puntos atrapados se elimina el primer elemento de la lista
             del snake_List[0]

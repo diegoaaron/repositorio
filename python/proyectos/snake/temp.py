@@ -25,7 +25,7 @@ while not game_over:
     pygame.draw.rect(screen, white, [0, 0, 20, 20]) # Rect(left, top, width, height) -> Rect
 
     for event in pygame.event.get():
-        print(event)
+        print(event, "---", event.type)
         if event.type == pygame.QUIT:
             game_over = True
 
