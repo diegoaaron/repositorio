@@ -2,7 +2,7 @@ import pygame
 import time
 import random
 
-pygame.init()
+pygame.init() # necesario para iniciar un proyecto
 
 white = (255, 255, 255)
 yellow = (255, 255, 102)
@@ -14,19 +14,19 @@ blue = (50, 153, 213)
 dis_width = 800
 dis_height = 400
 
-dis = pygame.display.set_mode([dis_width, dis_height])
-pygame.display.set_caption('Gusanito, por Diego')
+dis = pygame.display.set_mode([dis_width, dis_height]) # define el lienzo
+pygame.display.set_caption('Gusanito, por Diego') # define un título al lienzo
 
-clock = pygame.time.Clock()
+clock = pygame.time.Clock() # objeto que soporta el control del tiempo y fotogramas del juego
 
 snake_block = 10
 snake_speed = 10
 
-font_style = pygame.font.SysFont("bahnschrift", 25)
-score_font = pygame.font.SysFont("comicsansms", 35)
+font_style = pygame.font.SysFont("bahnschrift", 25) # objeto que brinda una fuente
+score_font = pygame.font.SysFont("comicsansms", 35) # objeto que brinda una fuente
 
-def Your_score(score):
-    value = score_font.render("Your Score: ", str(score), True, yellow)
+def Your_score(score): # funcion para mostrar el puntuja
+    value = score_font.render(f"Your Score: {score}", True, yellow)
     dis.blit(value, [0, 0])
 
 def our_snake(snake_block, snake_list): # dibuja el gusano
@@ -131,3 +131,15 @@ def gameLoop():
     quit()
 
 gameLoop()
+
+
+'''
+
+que código define la serpiente y su movimiento
+
+que código define comida y aparición de la serpiente
+
+que código define el acto de comer y crecer para la serpiente
+
+
+'''
