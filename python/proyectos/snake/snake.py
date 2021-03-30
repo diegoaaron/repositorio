@@ -20,7 +20,7 @@ pygame.display.set_caption('Gusanito, por Diego') # define un título al lienzo
 clock = pygame.time.Clock() # objeto que soporta el control del tiempo y fotogramas del juego
 
 snake_block = 10
-snake_speed = 5
+snake_speed = 10
 
 font_style = pygame.font.SysFont("bahnschrift", 25) # objeto que brinda una fuente
 score_font = pygame.font.SysFont("comicsansms", 35) # objeto que brinda una fuente
@@ -32,7 +32,6 @@ def Your_score(score): # funcion para mostrar el puntuja
 def our_snake(snake_block, snake_list): # dibuja el gusano
     for x in snake_list:
         pygame.draw.rect(dis, black, [x[0], x[1], snake_block, snake_block]) # Rect(left, top, width, height) -> Rect - dibuja el gusano
-    print("snake_list:",snake_list)
 
 def message(msg, color): # imprime un mensaje generico
     mesg = font_style.render(msg, True, color)
@@ -94,10 +93,10 @@ def gameLoop():
         
         
         if x1 >= dis_width or x1 < 0 or y1 >= dis_height or y1 < 0: # salir del mapa
-            game_over = True
+            game_close = True
           
-        x1 += x1_change # recoje la posición x a moverse
-        y1 += y1_change # recoje la posición y a moverse
+        x1 += x1_change # recoje la posición x actual
+        y1 += y1_change # recoje la posición y actual
         dis.fill(blue) # pinta de color azul el lienzo
 
         pygame.draw.rect(dis, green, [foodx, foody, snake_block, snake_block]) # dibuja un rectangulo verde de 10 x 10 en la posicion foodx, foody
@@ -110,7 +109,6 @@ def gameLoop():
         snake_List.append(snake_Head) # agrega la lista de la nueva posición a otra lista
 
         
-        print(len(snake_List), "len,snake_List", snake_List)
         if len(snake_List) > Length_of_snake: # ?
             del snake_List[0]
         
@@ -126,7 +124,6 @@ def gameLoop():
 
         print("x1: ", x1, "y1: ", y1, "foodx, foody", foodx, foody)
         if x1 == foodx and y1 == foody:
-            print("gaaneeeeeeeeeeeee")
             foodx = round(random.randrange(0, 790, 10))
             foody = round(random.randrange(0, 390, 10))
             Length_of_snake += 1

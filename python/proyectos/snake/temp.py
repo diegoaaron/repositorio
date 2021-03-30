@@ -8,7 +8,7 @@ screen = pygame.display.set_mode([screen_width, screen_height])
 
 white = (255, 255, 255)
 blue = (50, 153, 213)
-
+black = (0, 0, 0)
 #pygame.draw.rect(screen, white, [500, 200, 20, 20]) # Rect(left, top, width, height) -> Rect
 
 game_over = False
@@ -19,6 +19,10 @@ def Your_score(score): # funcion para mostrar el puntuja
     value = score_font.render(f"Your Score: {score}", True, yellow)
     screen.blit(value, [0, 0])
 
+
+def our_snake(snake_block, snake_list): # dibuja el gusano
+    for x in snake_list:
+        pygame.draw.rect(screen, black, [x[0], x[1], snake_block, snake_block]) # Rect(left, top, width, height) -> Rect - dibuja el gusano
 
 while not game_over:
     screen.fill(blue)
@@ -31,7 +35,9 @@ while not game_over:
 
     Your_score(event)
 
-    pygame.display.update() # actualiza la porción 
+    our_snake(10, [[350,100],[350,110], [350,120],[350,130]])
+
+    pygame.display.update() # actualiza el lienzo
 
 pygame.quit()
 
