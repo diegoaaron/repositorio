@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 
+import django_heroku
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -25,7 +27,7 @@ SECRET_KEY = '=jh@xx=0(56v-!d#5fi9qzn_wwj92de=q6-9&#g0*j2c7@ua3v'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['myapp.com','127.0.0.1',]
+ALLOWED_HOSTS = ['myapp.com', '127.0.0.1', 'bymecoffe.herokuapp.com',]
 
 
 # Application definition
@@ -139,10 +141,12 @@ LOGOUT_URL = 'logout'
 LOGOUT_REDIRECT_URL = 'login'
 
 
-SOCIAL_AUTH_FACEBOOK_KEY = ''        # App ID
-SOCIAL_AUTH_FACEBOOK_SECRET = ''  # App Secre
+SOCIAL_AUTH_FACEBOOK_KEY = '765736000742590'        # App ID
+SOCIAL_AUTH_FACEBOOK_SECRET = '4136be7c9675d93b0322461dfb22a488'  # App Secre
 
 
 # https://www.digitalocean.com/community/tutorials/how-to-deploy-django-to-app-platform
 
 # https://python-social-auth.readthedocs.io/en/latest/
+
+django_heroku.settings(locals())
