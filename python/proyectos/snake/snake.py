@@ -108,27 +108,29 @@ def gameLoop():
         
         snake_List.append(snake_Head) # agrega la lista de la nueva posición a otra lista
 
-        
-        if len(snake_List) > Length_of_snake: # ?
+        """
+        if len(snake_List) > Length_of_snake: # si cada par de cordenadas 
             del snake_List[0]
         
-        '''
+        
         for x in snake_List[:-1]: # evalua si una parte de la serpiente se golpea consigo mismo
             if x == snake_Head:
                 game_close = True
-        '''
+        """
 
         our_snake(snake_block, snake_List)
         Your_score(Length_of_snake - 1)
         pygame.display.update()
 
-        print("x1: ", x1, "y1: ", y1, "foodx, foody", foodx, foody)
+
         if x1 == foodx and y1 == foody:
             foodx = round(random.randrange(0, 790, 10))
             foody = round(random.randrange(0, 390, 10))
             Length_of_snake += 1
 
         clock.tick(snake_speed)
+
+        print("snake_list: ", snake_List)
 
     pygame.quit()
     quit()

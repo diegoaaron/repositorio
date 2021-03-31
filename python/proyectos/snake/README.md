@@ -4,6 +4,7 @@
 
 > Pierdes si golpeas tu cola, tiene un panel de administración
 > un borde superior para el score y tiempo, en los bordes áreas que funcionen como muros con aberturas para que la serpiente pueda pasar
+> No aparezca comida en el area de la serpiente
 
 ### Puntos revisados
 
