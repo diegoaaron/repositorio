@@ -145,3 +145,4 @@ SOCIAL_AUTH_FACEBOOK_SECRET = ''  # App Secre
 
 # https://www.digitalocean.com/community/tutorials/how-to-deploy-django-to-app-platform
 
+# https://python-social-auth.readthedocs.io/en/latest/
