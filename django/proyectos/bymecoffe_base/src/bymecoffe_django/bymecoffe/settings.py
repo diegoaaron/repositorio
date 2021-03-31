@@ -141,3 +141,7 @@ LOGOUT_REDIRECT_URL = 'login'
 
 SOCIAL_AUTH_FACEBOOK_KEY = ''        # App ID
 SOCIAL_AUTH_FACEBOOK_SECRET = ''  # App Secre
+
+
+# https://www.digitalocean.com/community/tutorials/how-to-deploy-django-to-app-platform
+
